@@ -8,11 +8,11 @@ export class WindowsService {
    */
   static obtainWindow(name) {
     return new Promise((resolve, reject) => {
-      overwolf.windows.obtainDeclaredWindow(name, result => {
+      overwolf.windows.obtainDeclaredWindow(name, (result) => {
         if (result.success) {
           resolve(result);
         } else {
-          console.warn('WindowsService.obtainWindow(): error:', name, result);
+          console.warn("WindowsService.obtainWindow(): error:", name, result);
           reject(new Error(result.error));
         }
       });
@@ -26,14 +26,11 @@ export class WindowsService {
    */
   static getCurrentWindow() {
     return new Promise((resolve, reject) => {
-      overwolf.windows.getCurrentWindow(result => {
+      overwolf.windows.getCurrentWindow((result) => {
         if (result.success) {
           resolve(result);
         } else {
-          console.warn(
-            'WindowsService.getCurrentWindow(): error:',
-            result
-          );
+          console.warn("WindowsService.getCurrentWindow(): error:", result);
           reject(new Error(result.error));
         }
       });
@@ -49,11 +46,11 @@ export class WindowsService {
     const { window } = await WindowsService.obtainWindow(name);
 
     return new Promise((resolve, reject) => {
-      overwolf.windows.restore(window.id, result => {
+      overwolf.windows.restore(window.id, (result) => {
         if (result.success) {
           resolve();
         } else {
-          console.warn('WindowsService.restore(): error:', name, result);
+          console.warn("WindowsService.restore(): error:", name, result);
           reject(new Error(result.error));
         }
       });
@@ -69,11 +66,11 @@ export class WindowsService {
     const { window } = await WindowsService.obtainWindow(name);
 
     return new Promise((resolve, reject) => {
-      overwolf.windows.minimize(window.id, result => {
+      overwolf.windows.minimize(window.id, (result) => {
         if (result.success) {
           resolve();
         } else {
-          console.warn('WindowsService.minimize(): error:', name, result);
+          console.warn("WindowsService.minimize(): error:", name, result);
           reject(new Error(result.error));
         }
       });
@@ -89,11 +86,11 @@ export class WindowsService {
     const { window } = await WindowsService.obtainWindow(name);
 
     return new Promise((resolve, reject) => {
-      overwolf.windows.maximize(window.id, result => {
+      overwolf.windows.maximize(window.id, (result) => {
         if (result.success) {
           resolve();
         } else {
-          console.warn('WindowsService.maximize(): error:', name, result);
+          console.warn("WindowsService.maximize(): error:", name, result);
           reject(new Error(result.error));
         }
       });
@@ -108,12 +105,11 @@ export class WindowsService {
   static async close(name) {
     const state = await WindowsService.getWindowState(name);
 
-    if (state === 'closed')
-      return;
+    if (state === "closed") return;
 
     const { window } = await WindowsService.obtainWindow(name);
 
-    await new Promise(resolve => overwolf.windows.close(window.id, resolve));
+    await new Promise((resolve) => overwolf.windows.close(window.id, resolve));
   }
 
   /**
@@ -127,12 +123,34 @@ export class WindowsService {
     const { window } = await WindowsService.obtainWindow(name);
 
     return new Promise((resolve, reject) => {
-      overwolf.windows.changePosition(window.id, left, top, result => {
+      overwolf.windows.changePosition(window.id, left, top, (result) => {
         if (result && result.success) {
           resolve(result);
         } else {
-          console.warn('WindowsService.changePosition(): error:', name, result);
+          console.warn("WindowsService.changePosition(): error:", name, result);
           reject(new Error(result.error));
+        }
+      });
+    });
+  }
+
+  /**
+   * Change size of a window
+   * @param {string} name
+   * @param {number} width
+   * @param {number} height
+   * @returns {Promise<any>}
+   */
+  static async changeSize(name, width, height) {
+    const { window } = await WindowsService.obtainWindow(name);
+
+    return new Promise((resolve, reject) => {
+      overwolf.windows.changeSize(window.id, width, height, (result) => {
+        if (result && result.success) {
+          resolve(result);
+        } else {
+          console.warn("WindowsService.changeSize(): error:", name, result);
+          reject(new Error(result && result.error));
         }
       });
     });
@@ -145,14 +163,14 @@ export class WindowsService {
    */
   static getWindowState(name) {
     return new Promise((resolve, reject) => {
-      overwolf.windows.getWindowState(name, result => {
+      overwolf.windows.getWindowState(name, (result) => {
         if (result.success) {
           resolve(result.window_state_ex);
         } else {
-          console.warn('WindowsService.getWindowState(): error:', name, result);
+          console.warn("WindowsService.getWindowState(): error:", name, result);
           reject(new Error(result.error));
         }
-      })
+      });
     });
   }
 
@@ -166,14 +184,14 @@ export class WindowsService {
     const { window } = await WindowsService.obtainWindow(name);
 
     return new Promise((resolve, reject) => {
-      overwolf.windows.setTopmost(window.id, shouldBeTopmost, result => {
+      overwolf.windows.setTopmost(window.id, shouldBeTopmost, (result) => {
         if (result.success) {
           resolve(result);
         } else {
-          console.warn('WindowsService.setTopmost(): error:', name, result);
+          console.warn("WindowsService.setTopmost(): error:", name, result);
           reject(new Error(result.error));
         }
-      })
+      });
     });
   }
 
@@ -187,14 +205,14 @@ export class WindowsService {
     const { window } = await WindowsService.obtainWindow(name);
 
     return new Promise((resolve, reject) => {
-      overwolf.windows.bringToFront(window.id, grabFocus, result => {
+      overwolf.windows.bringToFront(window.id, grabFocus, (result) => {
         if (result.success) {
           resolve(result);
         } else {
-          console.warn('WindowsService.bringToFront(): error:', name, result);
+          console.warn("WindowsService.bringToFront(): error:", name, result);
           reject(new Error(result.error));
         }
-      })
+      });
     });
   }
 
@@ -202,15 +220,15 @@ export class WindowsService {
    * Get states of app's windows
    * @returns {Promise<any>}
    */
-   static getWindowsStates() {
+  static getWindowsStates() {
     return new Promise((resolve, reject) => {
-      overwolf.windows.getWindowsStates(state => {
+      overwolf.windows.getWindowsStates((state) => {
         if (state.success) {
           resolve(state.resultV2);
         } else {
           reject(state);
         }
-      })
+      });
     });
   }
 
@@ -220,11 +238,11 @@ export class WindowsService {
    */
   static getMonitorsList() {
     return new Promise((resolve, reject) => {
-      overwolf.utils.getMonitorsList(result => {
+      overwolf.utils.getMonitorsList((result) => {
         if (result && result.success && result.displays) {
           resolve(result.displays);
         } else {
-          console.warn('WindowsService.getMonitorsList(): error:', result);
+          console.warn("WindowsService.getMonitorsList(): error:", result);
           reject(new Error(result.error));
         }
       });
@@ -237,8 +255,8 @@ export class WindowsService {
    */
   static windowStateIsOpen(state) {
     switch (state) {
-      case 'normal':
-      case 'maximized':
+      case "normal":
+      case "maximized":
         return true;
       default:
         return false;

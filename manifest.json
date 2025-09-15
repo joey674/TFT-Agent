@@ -54,12 +54,12 @@
         "transparent": false,
         "override_on_update": true,
         "size": {
-          "width": 1212,
-          "height": 699
+          "width": 1000,
+          "height": 420
         },
         "min_size": {
-          "width": 1212,
-          "height": 699
+          "width": 1000,
+          "height": 420
         }
       },
       "in_game": {
@@ -71,12 +71,12 @@
         "transparent": true,
         "override_on_update": true,
         "size": {
-          "width": 1212,
-          "height": 699
+          "width": 1000,
+          "height": 380
         },
         "min_size": {
-          "width": 1212,
-          "height": 699
+          "width": 1000,
+          "height": 380
         }
       },
       "second": {
@@ -89,12 +89,12 @@
         "keep_window_location": true,
         "disable_hardware_acceleration": true,
         "size": {
-          "width": 1212,
-          "height": 699
+          "width": 1000,
+          "height": 520
         },
         "min_size": {
-          "width": 1212,
-          "height": 699
+          "width": 1000,
+          "height": 520
         }
       }
     },

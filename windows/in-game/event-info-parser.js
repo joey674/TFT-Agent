@@ -30,6 +30,55 @@ export function inGameInfoUpdateParser(infoUpdate) {
     return result + "\n";
   }
 
+  // Augments (current augments and picked augment)
+  if (feature === "augments" && info?.me) {
+    // Current augments
+    if (typeof info.me.me === "string") {
+      let aug;
+      try {
+        aug = JSON.parse(info.me.me);
+      } catch {
+        aug = null;
+      }
+      if (aug) {
+        const names = [
+          aug.augment_1?.name,
+          aug.augment_2?.name,
+          aug.augment_3?.name,
+        ].filter((n) => n);
+        if (names.length > 0) {
+          return `Augments: ${names.join(", ")}\n\n`;
+        } else {
+          return `Augments: None\n\n`;
+        }
+      }
+    }
+    // Picked augment
+    if (typeof info.me.picked_augment === "string") {
+      let picked;
+      try {
+        picked = JSON.parse(info.me.picked_augment);
+      } catch {
+        picked = null;
+      }
+      if (picked) {
+        const names = [
+          picked.slot_1?.name,
+          picked.slot_2?.name,
+          picked.slot_3?.name,
+          picked.slot_4?.name,
+        ].filter((n) => n);
+        if (names.length === 1) {
+          return `Picked Augment: ${names[0]}\n\n`;
+        } else if (names.length > 1) {
+          return `Picked Augments: ${names.join(", ")}\n\n`;
+        } else {
+          return `Picked Augment: None\n\n`;
+        }
+      }
+    }
+  }
+
   // Bench
   if (feature === "bench" && typeof info?.bench?.bench_pieces === "string") {
     let benchPieces;

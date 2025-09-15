@@ -181,7 +181,10 @@ export class BackgroundController {
     if (this.hasMultipleMonitors) {
       return WindowsService.restore(kWindowNames.SECOND);
     } else {
-      return WindowsService.restore(kWindowNames.IN_GAME);
+      // Ensure in-game window is restored and resized to manifest-defined height (or desired)
+      return WindowsService.restore(kWindowNames.IN_GAME).then(() =>
+        WindowsService.changeSize(kWindowNames.IN_GAME, 1000, 380)
+      );
     }
   }
 

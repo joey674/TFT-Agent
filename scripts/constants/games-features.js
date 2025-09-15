@@ -13,7 +13,7 @@ export const kGamesFeatures = new Map([
       "board",
       "bench",
       "carousel", // 选秀
-      "augments", // 装备
+      "augments", // 海克斯
     ],
   ],
 

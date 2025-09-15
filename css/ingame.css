@@ -1,10 +1,13 @@
-body {
+html {
+  height: 100%;
+}
+body.in-game {
   background-color: rgba(51, 51, 51, 0.7);
   margin: 0px;
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  min-height: 100vh;
+  height: 100vh; /* fix container height */
   overflow: hidden;
 }
 
@@ -12,32 +15,40 @@ main {
   display: flex;
   flex: 1;
   position: relative;
-  padding: 38px;
+  padding: 12px;
   background: rgba(70, 70, 70, 0.5);
   border-radius: 12px;
+  min-height: 0; /* allow children to define scroll */
+  overflow: hidden; /* clip children, only inner scrolls */
 }
 
 h1 {
   font-family: "Roboto Mono", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   color: #d5d5d5;
 }
 
 #logs {
   display: flex;
   justify-content: space-between;
-  flex: 0 0 auto;
-  width: calc(100% - 210px);
+  flex: 1 1 auto; /* take available space */
+  width: 100%; /* fill full width */
+  gap: 8px;
+  min-height: 0; /* allow children to shrink and scroll */
+  height: 100%;
 }
 
 .logColumn {
   display: flex;
   flex-direction: column;
   flex: 1 1 50%;
-  padding-right: 30px;
+  min-width: 0; /* allow flex items to shrink */
+  min-height: 0; /* allow children to shrink */
+  padding-right: 0; /* no extra spacing */
   user-select: auto;
+  overflow: hidden; /* ensure inner .dataText handles scrolling */
 }
 
 #ad {
@@ -81,24 +92,28 @@ h1 {
   line-height: 150%;
 }
 
+/* Log area fills available space */
 .dataText {
-  background-color: rgba(70, 70, 70, 0.6);
+  background-color: #464646;
   border-radius: 4px;
   overflow-x: hidden;
   overflow-y: auto;
-  white-space: nowrap;
-  padding: 10px;
-  margin-top: 16px;
+  white-space: normal; /* let the inner pre control formatting */
   color: #8d8d8d;
-  height: calc(100vh - 200px);
+  padding: 10px;
+  margin-top: 8px;
   max-width: inherit;
+  flex: 1 1 auto; /* fill remaining height */
+  height: auto; /* no fixed height */
+  min-height: 0; /* allow shrinking inside flex */
+  max-height: 100%;
   font-size: 13px;
 }
 
 .dataText pre {
-  white-space: pre-line;
+  white-space: pre-wrap; /* preserve newlines and wrap long lines */
   word-break: break-word;
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .dataText::-webkit-scrollbar {
@@ -124,15 +139,15 @@ h1 {
 
 button.logCopy {
   background: #464646;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
   border-radius: 2px;
   color: #d5d5d5;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 120%;
-  padding: 6px 8px;
-  margin-top: 10px;
+  padding: 4px 6px;
+  margin-top: 6px;
   cursor: pointer;
   align-self: flex-start;
 }
