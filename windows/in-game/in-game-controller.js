@@ -1,7 +1,14 @@
-import { InGameView } from '../../windows/in-game/in-game-view.js';
-import { HotkeysService } from '../../scripts/services/hotkeys-service.js';
-import { RunningGameService } from '../../scripts/services/running-game-service.js';
-import { kHotkeySecondScreen, kHotkeyToggle } from '../../scripts/constants/hotkeys-ids.js';
+import { InGameView } from "../../windows/in-game/in-game-view.js";
+import { HotkeysService } from "../../scripts/services/hotkeys-service.js";
+import { RunningGameService } from "../../scripts/services/running-game-service.js";
+import {
+  inGameEventParser,
+  inGameInfoUpdateParser,
+} from "./event-info-parser.js";
+import {
+  kHotkeySecondScreen,
+  kHotkeyToggle,
+} from "../../scripts/constants/hotkeys-ids.js";
 
 export class InGameController {
   constructor() {
@@ -37,7 +44,7 @@ export class InGameController {
    * closes
    */
   _addBeforeCloseListener() {
-    window.addEventListener('beforeunload', e => {
+    window.addEventListener("beforeunload", (e) => {
       delete e.returnValue;
 
       this.owEventBus.removeListener(this._eventListenerBound);
@@ -48,30 +55,19 @@ export class InGameController {
    * Read & render events and info updates that happened before this was opened
    */
   _readStoredData() {
-    const {
-      owEventsStore,
-      owInfoUpdatesStore
-    } = overwolf.windows.getMainWindow();
+    const { owEventsStore, owInfoUpdatesStore } =
+      overwolf.windows.getMainWindow();
 
-    owEventsStore.forEach(v => this._gameEventHandler(v));
-    owInfoUpdatesStore.forEach(v => this._infoUpdateHandler(v));
+    owEventsStore.forEach((v) => this._gameEventHandler(v));
+    owInfoUpdatesStore.forEach((v) => this._infoUpdateHandler(v));
   }
 
   async _updateHotkey() {
     const gameInfo = await this.runningGameService.getRunningGameInfo();
 
-    const [
-      hotkeyToggle,
-      hotkeySecondScreen
-    ] = await Promise.all([
-      this.hotkeysService.getHotkey(
-        kHotkeyToggle,
-        gameInfo.classId
-      ),
-      this.hotkeysService.getHotkey(
-        kHotkeySecondScreen,
-        gameInfo.classId
-      )
+    const [hotkeyToggle, hotkeySecondScreen] = await Promise.all([
+      this.hotkeysService.getHotkey(kHotkeyToggle, gameInfo.classId),
+      this.hotkeysService.getHotkey(kHotkeySecondScreen, gameInfo.classId),
     ]);
 
     this.inGameView.updateToggleHotkey(hotkeyToggle);
@@ -80,11 +76,11 @@ export class InGameController {
 
   _eventListener(eventName, eventValue) {
     switch (eventName) {
-      case 'event': {
+      case "event": {
         this._gameEventHandler(eventValue);
         break;
       }
-      case 'info': {
+      case "info": {
         this._infoUpdateHandler(eventValue);
         break;
       }
@@ -96,23 +92,28 @@ export class InGameController {
     let isHighlight = false;
 
     switch (event.name) {
-      case 'kill':
-      case 'death':
-      case 'assist':
-      case 'level':
-      case 'matchStart':
-      case 'matchEnd':
-      case 'match_start':
-      case 'match_end':
+      case "kill":
+      case "death":
+      case "assist":
+      case "level":
+      case "matchStart":
+      case "matchEnd":
+      case "match_start":
+      case "match_end":
         isHighlight = true;
         break;
     }
 
-    this.inGameView.logEvent(JSON.stringify(event), isHighlight);
+    // Use parser
+    this.inGameView.logEvent(inGameEventParser(event) + "\n", isHighlight);
   }
 
   // Logs info updates
   _infoUpdateHandler(infoUpdate) {
-    this.inGameView.logInfoUpdate(JSON.stringify(infoUpdate), false);
+    // Use parser
+    this.inGameView.logInfoUpdate(
+      inGameInfoUpdateParser(infoUpdate) + "\n",
+      false
+    );
   }
 }

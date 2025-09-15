@@ -1,12 +1,18 @@
-import { kWindowNames } from '../../scripts/constants/window-names.js';
-import { RunningGameService } from '../../scripts/services/running-game-service.js';
-import { WindowsService } from '../../scripts/services/windows-service.js';
-import { HotkeysService } from '../../scripts/services/hotkeys-service.js';
-import { GepService } from '../../scripts/services/gep-service.js';
-import { EventBus } from '../../scripts/services/event-bus.js';
-import { GoogleAnalytics } from '../../scripts/services/google-analytics.js';
-import { kGameClassIds, kGamesFeatures } from '../../scripts/constants/games-features.js';
-import { kHotkeySecondScreen, kHotkeyToggle } from '../../scripts/constants/hotkeys-ids.js';
+import { kWindowNames } from "../../scripts/constants/window-names.js";
+import { RunningGameService } from "../../scripts/services/running-game-service.js";
+import { WindowsService } from "../../scripts/services/windows-service.js";
+import { HotkeysService } from "../../scripts/services/hotkeys-service.js";
+import { GepService } from "../../scripts/services/gep-service.js";
+import { EventBus } from "../../scripts/services/event-bus.js";
+import { GoogleAnalytics } from "../../scripts/services/google-analytics.js";
+import {
+  kGameClassIds,
+  kGamesFeatures,
+} from "../../scripts/constants/games-features.js";
+import {
+  kHotkeySecondScreen,
+  kHotkeyToggle,
+} from "../../scripts/constants/hotkeys-ids.js";
 
 export class BackgroundController {
   constructor() {
@@ -27,7 +33,8 @@ export class BackgroundController {
     window.owEventsStore = this.owEventsStore;
     window.owInfoUpdatesStore = this.owInfoUpdatesStore;
 
-    this.hasMultipleMonitors = await BackgroundController._hasMultipleMonitors();
+    this.hasMultipleMonitors =
+      await BackgroundController._hasMultipleMonitors();
 
     // Register handlers to hotkey events
     this._registerHotkeys();
@@ -35,12 +42,12 @@ export class BackgroundController {
     await this._restoreLaunchWindow();
 
     // Switch between desktop/in-game windows when launching/closing game
-    this.runningGameService.addGameRunningChangedListener(isRunning => {
+    this.runningGameService.addGameRunningChangedListener((isRunning) => {
       this._onRunningGameChanged(isRunning);
     });
 
-    overwolf.extensions.onAppLaunchTriggered.addListener(e => {
-      if (e && e.source !== 'gamelaunchevent') {
+    overwolf.extensions.onAppLaunchTriggered.addListener((e) => {
+      if (e && e.source !== "gamelaunchevent") {
         this._restoreAppWindow();
       }
     });
@@ -51,7 +58,7 @@ export class BackgroundController {
     });
 
     this.ga.start();
-    this.ga.ga('send', 'pageview');
+    this.ga.ga("send", "pageview");
   }
 
   /**
@@ -59,7 +66,7 @@ export class BackgroundController {
    * @private
    */
   static _launchedWithGameEvent() {
-    return location.href.includes('source=gamelaunchevent');
+    return location.href.includes("source=gamelaunchevent");
   }
 
   /**
@@ -69,7 +76,7 @@ export class BackgroundController {
   static async _hasMultipleMonitors() {
     const monitors = await WindowsService.getMonitorsList();
 
-    return (monitors.length > 1);
+    return monitors.length > 1;
   }
 
   /**
@@ -107,8 +114,8 @@ export class BackgroundController {
       // Register to game events
       GepService.setRequiredFeatures(
         gameFeatures,
-        e => this._onGameEvents(e),
-        e => this._onInfoUpdate(e)
+        (e) => this._onGameEvents(e),
+        (e) => this._onInfoUpdate(e)
       );
     }
 
@@ -140,8 +147,8 @@ export class BackgroundController {
     if (gameFeatures && gameFeatures) {
       GepService.setRequiredFeatures(
         gameFeatures,
-        e => this._onGameEvents(e),
-        e => this._onInfoUpdate(e)
+        (e) => this._onGameEvents(e),
+        (e) => this._onInfoUpdate(e)
       );
     }
 
@@ -208,8 +215,8 @@ export class BackgroundController {
 
     // If all UI (non-background) windows are closed, we can close the app
     return Object.entries(states)
-      .filter(([windowName]) => (windowName !== kWindowNames.BACKGROUND))
-      .every(([windowName, windowState]) => (windowState === 'closed'));
+      .filter(([windowName]) => windowName !== kWindowNames.BACKGROUND)
+      .every(([windowName, windowState]) => windowState === "closed");
   }
 
   /**
@@ -291,12 +298,19 @@ export class BackgroundController {
    * @private
    */
   _onGameEvents(data) {
-    data.events.forEach(event => {
+    data.events.forEach((event) => {
       this.owEventsStore.push(event);
 
-      this.owEventBus.trigger('event', event);
+      // 美化输出格式
+      const formatted = `event: ${event.name}\ntime: ${
+        event.time || ""
+      }\ncontents: ${event.data ? JSON.stringify(event.data, null, 2) : ""}`;
+      // 输出到控制台，每个事件之间加一行空行
+      console.log(formatted + "\n");
 
-      if (event.name === 'matchStart') {
+      this.owEventBus.trigger("event", event);
+
+      if (event.name === "matchStart") {
         this._restoreGameWindow();
       }
     });
@@ -309,6 +323,6 @@ export class BackgroundController {
   _onInfoUpdate(infoUpdate) {
     this.owInfoUpdatesStore.push(infoUpdate);
 
-    this.owEventBus.trigger('info', infoUpdate);
+    this.owEventBus.trigger("info", infoUpdate);
   }
 }
