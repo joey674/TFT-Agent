@@ -79,6 +79,73 @@ export function inGameInfoUpdateParser(infoUpdate) {
     }
   }
 
+  // Carousel
+  if (
+    feature === "carousel" &&
+    typeof info?.carousel?.carousel_pieces === "string"
+  ) {
+    let carouselPieces;
+    try {
+      carouselPieces = JSON.parse(info.carousel.carousel_pieces);
+    } catch {
+      carouselPieces = {};
+    }
+    let result = "Carousel:\n";
+    const slots = Object.keys(carouselPieces).sort((a, b) => {
+      const na = parseInt(a.split("_")[1] || "0", 10);
+      const nb = parseInt(b.split("_")[1] || "0", 10);
+      return na - nb;
+    });
+    for (const slot of slots) {
+      const piece = carouselPieces[slot] || {};
+      const items = [piece.item_1, piece.item_2, piece.item_3]
+        .filter((x) => (typeof x === "string" ? x.trim() : x))
+        .filter(Boolean);
+      result += `  ${slot}: ${piece.name || ""}`;
+      if (items.length) result += ` (Items: ${items.join(", ")})`;
+      result += "\n";
+    }
+    return result + "\n";
+  }
+
+  // Roster - players status
+  if (feature === "roster" && typeof info?.roster?.player_status === "string") {
+    let statusObj;
+    try {
+      statusObj = JSON.parse(info.roster.player_status);
+    } catch {
+      statusObj = null;
+    }
+    if (statusObj && typeof statusObj === "object") {
+      const entries = Object.entries(statusObj)
+        .map(([name, v]) => ({
+          name,
+          index: v?.index ?? 0,
+          health: v?.health,
+          level: v?.xp, // appears to represent level here
+          rank: v?.rank,
+          tag: v?.tag_line,
+          me: !!v?.localplayer,
+        }))
+        .sort((a, b) => a.index - b.index);
+
+      let result = "Roster:\n";
+      for (const p of entries) {
+        const you = p.me ? " (You)" : "";
+        const parts = [];
+        if (typeof p.health !== "undefined") parts.push(`HP ${p.health}`);
+        if (typeof p.level !== "undefined") parts.push(`Level ${p.level}`);
+        if (p.tag) parts.push(`Tag ${p.tag}`);
+        if (p.rank && p.rank > 0) parts.push(`Rank ${p.rank}`);
+        const detail = parts.join(", ");
+        result += `  ${p.index}. ${p.name}${you}${
+          detail ? ": " + detail : ""
+        }\n`;
+      }
+      return result + "\n";
+    }
+  }
+
   // Bench
   if (feature === "bench" && typeof info?.bench?.bench_pieces === "string") {
     let benchPieces;
