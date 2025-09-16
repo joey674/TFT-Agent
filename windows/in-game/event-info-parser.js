@@ -1,14 +1,126 @@
 // event-info-parser.js
 // Utility to format game events and info updates for display
 
+/**
+ * game event
+ */
 export function inGameEventParser(event) {
+  if (event && event.name === "picked_item" && event.data) {
+    return `Picked Item: ${event.data}\n`;
+  }
   return JSON.stringify(event, null, 2) + "\n";
 }
 
+/**
+ * game info update
+ */
 export function inGameInfoUpdateParser(infoUpdate) {
   if (!infoUpdate || typeof infoUpdate !== "object") return "";
 
   const { feature, info } = infoUpdate;
+
+  // live_client_data
+  if (feature === "live_client_data") {
+    return "";
+  }
+
+  // match_info
+  if (feature === "match_info") {
+    // Flat shape: item_select via key + data/value (JSON)
+    if (
+      infoUpdate?.key === "item_select" &&
+      (typeof infoUpdate?.data === "string" ||
+        typeof infoUpdate?.value === "string")
+    ) {
+      const raw =
+        typeof infoUpdate.data === "string"
+          ? infoUpdate.data
+          : infoUpdate.value;
+      let itemsObj;
+      try {
+        itemsObj = JSON.parse(raw);
+      } catch {
+        itemsObj = null;
+      }
+      if (itemsObj && typeof itemsObj === "object") {
+        let result = "Item Select:\n";
+        const keys = Object.keys(itemsObj).sort((a, b) => {
+          const na = parseInt(a.split("_")[1] || "0", 10);
+          const nb = parseInt(b.split("_")[1] || "0", 10);
+          return na - nb;
+        });
+        for (const k of keys) {
+          const it = itemsObj[k] || {};
+          result += `  ${k}: ${it.name || ""}\n`;
+        }
+        return result + "\n";
+      }
+      return "";
+    }
+
+    // Nested shape: item_select under info.match_info
+    if (typeof info?.match_info?.item_select === "string") {
+      let itemsObj;
+      try {
+        itemsObj = JSON.parse(info.match_info.item_select);
+      } catch {
+        itemsObj = null;
+      }
+      if (itemsObj && typeof itemsObj === "object") {
+        let result = "Item Select:\n";
+        const keys = Object.keys(itemsObj).sort((a, b) => {
+          const na = parseInt(a.split("_")[1] || "0", 10);
+          const nb = parseInt(b.split("_")[1] || "0", 10);
+          return na - nb;
+        });
+        for (const k of keys) {
+          const it = itemsObj[k] || {};
+          result += `  ${k}: ${it.name || ""}\n`;
+        }
+        return result + "\n";
+      }
+      return "";
+    }
+
+    if (
+      infoUpdate?.key === "round_type" &&
+      typeof infoUpdate?.data === "string"
+    ) {
+      let data;
+      try {
+        data = JSON.parse(infoUpdate.data);
+      } catch {
+        data = null;
+      }
+      if (data) {
+        const stage = data.stage ?? "";
+        const name = data.name ?? "";
+        const type = data.type ?? "";
+        const suffix = type ? ` (${type})` : "";
+        return `Round Type: ${stage} ${name}${suffix}\n`;
+      }
+      return "";
+    }
+
+    if (typeof info?.match_info?.round_type === "string") {
+      let data;
+      try {
+        data = JSON.parse(info.match_info.round_type);
+      } catch {
+        data = null;
+      }
+      if (data) {
+        const stage = data.stage ?? "";
+        const name = data.name ?? "";
+        const type = data.type ?? "";
+        const suffix = type ? ` (${type})` : "";
+        return `Round Type: ${stage} ${name}${suffix}\n`;
+      }
+      return "";
+    }
+
+    return "";
+  }
 
   // Gold
   if (feature === "me" && info?.me?.gold !== undefined) {

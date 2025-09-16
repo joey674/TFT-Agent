@@ -5,6 +5,7 @@ import {
   inGameEventParser,
   inGameInfoUpdateParser,
 } from "./event-info-parser.js";
+import stateService from "../../scripts/services/state-service.js";
 import {
   kHotkeySecondScreen,
   kHotkeyToggle,
@@ -105,15 +106,28 @@ export class InGameController {
     }
 
     // Use parser
-    this.inGameView.logEvent(inGameEventParser(event) + "\n", isHighlight);
+    const formatted = inGameEventParser(event);
+    // Record into state service
+    try {
+      stateService.addEvent(event, formatted);
+    } catch (_) {
+      // ignore state persistence errors
+    }
+    this.inGameView.logEvent(formatted + "\n", isHighlight);
   }
 
   // Logs info updates
   _infoUpdateHandler(infoUpdate) {
     // Use parser
-    this.inGameView.logInfoUpdate(
-      inGameInfoUpdateParser(infoUpdate) + "\n",
-      false
-    );
+    const formatted = inGameInfoUpdateParser(infoUpdate);
+    // Record into state service
+    try {
+      stateService.addInfoUpdate(infoUpdate, formatted);
+    } catch (_) {
+      // ignore state persistence errors
+    }
+    if (formatted) {
+      this.inGameView.logInfoUpdate(formatted + "\n", false);
+    }
   }
 }

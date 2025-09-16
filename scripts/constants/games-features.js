@@ -5,9 +5,9 @@ export const kGamesFeatures = new Map([
     [
       "gep_internal",
       "game_info",
-      // "live_client_data",
+      "live_client_data",
       "me",
-      // "match_info",
+      "match_info",
       "roster",
       "store",
       "board",
