@@ -1,10 +1,7 @@
 import { InGameView } from "../../windows/in-game/in-game-view.js";
 import { HotkeysService } from "../../scripts/services/hotkeys-service.js";
 import { RunningGameService } from "../../scripts/services/running-game-service.js";
-import {
-  inGameEventParser,
-  inGameInfoUpdateParser,
-} from "./event-info-parser.js";
+import { inGameEventParser } from "./event-parser.js";
 import stateService from "../../scripts/services/state-service.js";
 import {
   kHotkeySecondScreen,
@@ -59,10 +56,12 @@ export class InGameController {
     const { owEventsStore, owInfoUpdatesStore } =
       overwolf.windows.getMainWindow();
 
-    owEventsStore.forEach((v) => this._gameEventHandler(v));
-    owInfoUpdatesStore.forEach((v) => this._infoUpdateHandler(v));
+    owInfoUpdatesStore.forEach((v) => this._eventListener(null, v));
   }
 
+  /**
+   * Update the hotkey display in the in-game window
+   */
   async _updateHotkey() {
     const gameInfo = await this.runningGameService.getRunningGameInfo();
 
@@ -75,59 +74,26 @@ export class InGameController {
     this.inGameView.updateSecondHotkey(hotkeySecondScreen);
   }
 
+  /**
+   * The main event listener for in-game events and info updates
+   */
   _eventListener(eventName, eventValue) {
-    switch (eventName) {
-      case "event": {
-        this._gameEventHandler(eventValue);
-        break;
-      }
-      case "info": {
-        this._infoUpdateHandler(eventValue);
-        break;
-      }
-    }
-  }
-
-  // Logs events
-  _gameEventHandler(event) {
-    let isHighlight = false;
-
-    switch (event.name) {
-      case "kill":
-      case "death":
-      case "assist":
-      case "level":
-      case "matchStart":
-      case "matchEnd":
-      case "match_start":
-      case "match_end":
-        isHighlight = true;
-        break;
-    }
+    console.log("InGameController");
 
     // Use parser
-    const formatted = inGameEventParser(event);
-    // Record into state service
-    try {
-      stateService.addEvent(event, formatted);
-    } catch (_) {
-      // ignore state persistence errors
+    const formatted = inGameEventParser(eventValue);
+    if (!formatted) {
+      return;
     }
-    this.inGameView.logEvent(formatted + "\n", isHighlight);
-  }
 
-  // Logs info updates
-  _infoUpdateHandler(infoUpdate) {
-    // Use parser
-    const formatted = inGameInfoUpdateParser(infoUpdate);
-    // Record into state service
-    try {
-      stateService.addInfoUpdate(infoUpdate, formatted);
-    } catch (_) {
-      // ignore state persistence errors
-    }
-    if (formatted) {
-      this.inGameView.logInfoUpdate(formatted + "\n", false);
-    }
+    // Save to state service
+    stateService.addInfoUpdate(formatted);
+
+    // Log info update to view
+    this.inGameView.logInfoUpdate(formatted + "\n", false);
+
+    // // Log state to view
+    const latest = stateService.getLatest();
+    this.inGameView.logEvent(JSON.stringify(latest, null, 2) + "\n", false);
   }
 }

@@ -1,20 +1,10 @@
-// event-info-parser.js
+// event-parser.js
 // Utility to format game events and info updates for display
-
-/**
- * game event
- */
-export function inGameEventParser(event) {
-  if (event && event.name === "picked_item" && event.data) {
-    return `Picked Item: ${event.data}\n`;
-  }
-  return JSON.stringify(event, null, 2) + "\n";
-}
 
 /**
  * game info update
  */
-export function inGameInfoUpdateParser(infoUpdate) {
+export function inGameEventParser(infoUpdate) {
   if (!infoUpdate || typeof infoUpdate !== "object") return "";
 
   const { feature, info } = infoUpdate;
@@ -294,6 +284,11 @@ export function inGameInfoUpdateParser(infoUpdate) {
       result += ")\n";
     }
     return result + "\n";
+  }
+
+  // System Events
+  if (infoUpdate && infoUpdate.name === "picked_item" && infoUpdate.data) {
+    return `Picked Item: ${infoUpdate.data}\n`;
   }
 
   // Default: beautified JSON
