@@ -1,8 +1,8 @@
 import { InGameView } from "../../windows/in-game/in-game-view.js";
 import { HotkeysService } from "../../scripts/services/hotkeys-service.js";
 import { RunningGameService } from "../../scripts/services/running-game-service.js";
-import { inGameEventParser } from "./event-parser.js";
-import stateService from "../../scripts/services/state-service.js";
+import { inGameEventParser } from "../../src/event-parser.js";
+import stateService from "../../src/state-service.js";
 import {
   kHotkeySecondScreen,
   kHotkeyToggle,
@@ -92,8 +92,15 @@ export class InGameController {
     // Log info update to view
     this.inGameView.logInfoUpdate(formatted + "\n", false);
 
-    // // Log state to view
-    const latest = stateService.getLatest();
-    this.inGameView.logEvent(JSON.stringify(latest, null, 2) + "\n", false);
+    // Log state to view
+    // const latest = stateService.getLatest();
+    // this.inGameView.logEvent(JSON.stringify(latest, null, 2) + "\n", false);
+
+    // const comp = stateService.getComp();
+    // this.inGameView.logEvent(JSON.stringify(comp), false);
+
+    const compMatch = stateService.getCompMatch();
+    console.log(compMatch);
+    this.inGameView.logEvent(compMatch, false);
   }
 }
