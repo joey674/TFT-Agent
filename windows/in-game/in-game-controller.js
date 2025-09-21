@@ -3,6 +3,7 @@ import { HotkeysService } from "../../scripts/services/hotkeys-service.js";
 import { RunningGameService } from "../../scripts/services/running-game-service.js";
 import { inGameEventParser } from "../../src/event-parser.js";
 import stateService from "../../src/state-service.js";
+import { analyzeAugments } from "../../src/augment-analyzer.js";
 import {
   kHotkeySecondScreen,
   kHotkeyToggle,
@@ -99,8 +100,14 @@ export class InGameController {
     // const comp = stateService.getComp();
     // this.inGameView.logEvent(JSON.stringify(comp), false);
 
-    const compMatch = stateService.getCompMatch();
-    console.log(compMatch);
+    // 返回阵容推荐
+    const compMatch = stateService.getCompMatch(/*topN=*/ 1);
     this.inGameView.logEvent(compMatch, false);
+
+    // 返回强化符文推荐
+    if (/^Augments:/i.test(formatted.trim())) {
+      const augReport = analyzeAugments(formatted.trim());
+      if (augReport) this.inGameView.logEvent(augReport, false);
+    }
   }
 }

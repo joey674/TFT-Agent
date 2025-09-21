@@ -1,5 +1,5 @@
-export const VersionTag = "TFT15"; // 版本前缀
+export const versionTag = "TFT15"; // 版本前缀
 
 export default {
-  VersionTag,
+  versionTag,
 };

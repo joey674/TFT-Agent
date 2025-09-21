@@ -1,0 +1,1278 @@
+{
+  "augment": [
+    {
+      "apiName": "TFT15_Augment_BattleAcademia_Hero101",
+      "desc": "The first time you win @CombatWins@ player combats (Wins: @TFTUnitProperty.:TFT15_Augment_BattleAcademia_Hero101_Wins@), all Battle Academia champions gain @BonusHealth@ Health and @ReducedMana*100@% reduced max Mana. Gain a Garen and Ezreal.",
+      "effects": {
+        "BonusHealth": 100.0,
+        "CombatWins": 4,
+        "ReducedMana": 0.15000000596046448
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_EdgelordCrown",
+      "desc": "Gain an Edgelord Emblem, a Hand of Justice, and a Yasuo.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ProtectorCrest",
+      "desc": "Gain a Protector Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_BastionCrest",
+      "desc": "Gain a Bastion Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ProdigyCrown",
+      "desc": "Gain a Prodigy Emblem, a Spear of Shojin, and an Ezreal.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SupremeCellsCirclet",
+      "desc": "Gain a Supreme Cells Emblem and an Akali.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_TheCrew_SpaceCamp",
+      "desc": "Whenever you upgrade a 1-cost Crew champion, gain a random 1-3 cost Crew champion. Gain a Malphite.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_KennenCarry",
+      "desc": "Gain a Kennen. Your strongest Kennen becomes a ranged Marksman. He throws piercing Shurikens that can stun and deal magic damage.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_DrMundoCarry",
+      "desc": "Gain a Dr. Mundo. Your strongest Dr. Mundo becomes a Ranged Marksman. He now throws chairs that deal heavy damage, but cost Health.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_CrystalGambit_DiamondHands",
+      "desc": "Gain @IncreasedGP*100@% more total Gems from Crystal Gambit, but you can only cash out once, on @CashoutStage@-@CashoutRound@. While Double Down is active, winning loses an additional @PercentGPLostOnWin*100@% of your total Gems rather than cashing out.",
+      "effects": {
+        "CashoutRound": 7,
+        "CashoutStage": 4,
+        "IncreasedGP": 0.5,
+        "PercentGPLostOnWin": 0.10000000149011612
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_Executioner_GoldenGuillotine",
+      "desc": "Executioner kills have a chance to drop loot, scaling with Critical Strike Chance. The value of the loot given can also critically strike, granting even more loot. Gain a Katarina and Kalista.",
+      "effects": {
+        "{51972fee}": 2.0,
+        "{a59e2760}": 0.5,
+        "{c209103c}": 0.11999999731779099,
+        "{ca332ec1}": 0.5,
+        "{d89481f4}": 1.75
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_RingKingCrest",
+      "desc": "Gain a Luchador Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SentaiCirclet",
+      "desc": "Gain a Mighty Mech Crest and a Lucian",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Prodigy_UnboundArcana",
+      "desc": "Every 2 seconds, Prodigies gain Ability Power equal to @PercentManaToAP*100@% of their Mana Regeneration (rounded down).",
+      "effects": {
+        "PercentManaToAP": 0.5
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_BattleAcademia_ClassPresident",
+      "desc": "Combat start: Powered Up Battle Academia champions and allies adjacent to one gain @Health@ Health, @AD*100@% AD, and @AP@% AP. Battle Academia units gain double. Gain a Katarina",
+      "effects": {
+        "AD": 0.07999999821186066,
+        "AP": 8.0,
+        "Health": 70.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_Heavyweight_RingTheBell",
+      "desc": "After @Timer@ seconds, your Heavyweight champions gain @MaxHealth*100@% max Health and @DamageAmp*100@% Damage Amp. Gain a Kobuko and a Zac.",
+      "effects": {
+        "DamageAmp": 0.20000000298023224,
+        "MaxHealth": 0.30000001192092896,
+        "Timer": 15
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_SniperCrown",
+      "desc": "Gain a Sniper Emblem, an Infinity Edge, and a Caitlyn.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_CrystalRoseCirclet",
+      "desc": "Gain a Crystal Gambit Emblem and a Janna.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_StarGuardian_Superstar",
+      "desc": "Star Guardians with a Power Up grant @PercentIncrease*100@% increased Star Guardian bonuses. Gain a Xayah.",
+      "effects": {
+        "PercentIncrease": 1.5
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_BastionCirclet",
+      "desc": "Gain a Bastion Emblem, a Giant's Belt, and a Leona.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_StarGuardianCrest",
+      "desc": "Gain a Star Guardian Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_BattleAcademiaCrown",
+      "desc": "Gain a Battle Academia Emblem, a Spirit Visage, and a Garen.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_StrategistCirclet",
+      "desc": "Gain a Strategist Emblem, a Ziggs, and a Tear of the Goddess.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SpellslingerCrown",
+      "desc": "Gain a Sorcerer Emblem, a Jeweled Gauntlet, and an Ahri.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_MalphiteCarry",
+      "desc": "Gain a Malphite. Your strongest Malphite becomes a Fighter, gaining increased Attack Speed. He now charges at nearby enemies, knocking them up and dealing heavy damage.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SupremeCells_AllForOne",
+      "desc": "Whenever an ally dies, they grant the Supreme Cell with the most damage this round @PercentHealth*100@% of their maximum health. Gain a Kai'Sa and Kennen.",
+      "effects": {
+        "PercentHealth": 0.07999999821186066
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_SoulFighterCrown",
+      "desc": "Gain a Soul Fighter Emblem, a Spear of Shojin, and a Kalista.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SoulFighter_TheGodsEyeOpens",
+      "desc": "Every @Cadence@ seconds the God's Eye grants a random Soul Fighter @ShieldAmount@ shield and @AS*100@% stacking Attack Speed for the rest of combat. Gain a Kalista and Naafiri.",
+      "effects": {
+        "AS": 0.11999999731779099,
+        "Cadence": 4,
+        "ShieldAmount": 200
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_Bastion_RaidBoss",
+      "desc": "Your strongest Bastion champion gains @Health*100@% max Health. When other Bastions die, they transfer @DefenseRatio*100@% of their Armor and Magic Resist to it. Gain a Shen and Rell.",
+      "effects": {
+        "DefenseRatio": 0.20000000298023224,
+        "Health": 0.20000000298023224
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_StrategistCrown",
+      "desc": "Gain a Strategist Emblem, a Janna, and an Adaptive Helm.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Mentor_LearnFromTheBest",
+      "desc": "Whenever you star-up a champion they permanently gain @BonusPercent*100@% of every unique Mentor bonus of Mentors on your board or bench. Gain a Yasuo.",
+      "effects": {
+        "BonusPercent": 0.5
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_DestroyerCrown",
+      "desc": "Gain a Executioner Emblem, a Striker's Flail, and a Katarina.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_JuggernautCrest",
+      "desc": "Gain a Juggernaut Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SentaiRanger_BeTheLegs",
+      "desc": "The Mighty Mech gains @BonusDefenses@ Armor and Magic Resist and @BonusHealth@ Health. Gain 3 Mighty Mech champions. <br><br>Field 7 Mighty Mech, reach level 10, and hold all 3 Mighty Mech Augments to activate MECHA-MERGE PROTOCOL.",
+      "effects": {
+        "BonusDefenses": 10,
+        "BonusHealth": 100.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_Luchador_GrandSlam",
+      "desc": "Luchadors gain @BonusAS*100@% Attack Speed. When Luchador is active, Luchadors leap into battle at combat start. Luchador leaps deal @PercentBaseAD*100@% of their Basic Attack Damage. Gain a Dr. Mundo.",
+      "effects": {
+        "BonusAS": 0.10000000149011612,
+        "PercentBaseAD": 3.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_JuggernautCirclet",
+      "desc": "Gain a Juggernaut Emblem, an Udyr, and a Giant's Belt.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SentaiCrown",
+      "desc": "Gain a Mighty Mech Emblem, a Kraken's Fury, and a Lucian.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_BattleAcademiaCirclet",
+      "desc": "Gain a Battle Academia Emblem and a Rakan.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ChallengerCirclet",
+      "desc": "Gain a Duelist Emblem, an Ashe, and a BF Sword.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_StarGuardian_PowerOfFriendship",
+      "desc": "Star Guardians who start combat adjacent to at least one other Star Guardian gain @Mana@ Mana Regeneration, @Defenses@ Armor, and @Defenses@ Magic Resist. Gain a Rell.",
+      "effects": {
+        "Defenses": 20,
+        "Mana": 1
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_CrystalRoseCrest",
+      "desc": "Gain a Crystal Gambit Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_NeekoCarry",
+      "desc": "Gain a Neeko. Your strongest Neeko becomes a Magic Fighter and gains increased Attack Speed. Her Ability deals more damage, and increases its radius with every cast.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SpellslingerCrest",
+      "desc": "Gain an Sorcerer Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_HeavyweightCirclet",
+      "desc": "Gain a Heavyweight Emblem, a Poppy, and a Giant's Belt.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_HeavyweightCrown",
+      "desc": "Gain a Heavyweight Emblem, a Spirit Visage, and a Kobuko.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_TheCrew_EscapeVelocity",
+      "desc": "Gain 1 Velocity per reroll, and @LevelNum@ when you level up. Crew units gain @AS*100%@% Attack Speed for every 3 Velocity.<br><br>(Velocity: @TFTUnitProperty.:TFT15_Augment_TheCrew_EscapeVelocity_Velocity@)",
+      "effects": {
+        "AS": 0.009999999776482582,
+        "LevelNum": 6.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_Edgelord_GainTheEdge",
+      "desc": "Edgelords now gain up to @Mult*100@% of their Attack Speed bonus the lower health their target is. Gain a Shen and Xayah.",
+      "effects": {
+        "Mult": 2.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_SupremeCells_NewContenders",
+      "desc": "Grant @BonusSharePercent*100@% of Supreme Cell's bonus to all champions on your team. Any champion on your team can now become the Supreme Cell. Gain a Kai'Sa and Kennen.",
+      "effects": {
+        "BonusSharePercent": 0.5
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_UdyrCarry",
+      "desc": "Gain an Udyr. Your strongest Udyr becomes an Attack Fighter and sends bouncing gusts of flame out with every attack. His spell no longer rapidly attacks, but instead grants him stacking Attack Speed.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ChallengerCrest",
+      "desc": "Gain a Duelist Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Juggernaut_Indomitable",
+      "desc": "Whenever an ally Juggernaut dies, all other Juggernauts gain a @MaxHealthHeal*100@% max Health shield for @ShieldDuration@ seconds and gain @AdditionalDurabilityRatio*100@% more Durability. Gain an Aatrox and Dr. Mundo.",
+      "effects": {
+        "AdditionalDurabilityRatio": 0.019999999552965164,
+        "MaxHealthHeal": 0.10000000149011612,
+        "ShieldDuration": 5
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_Wraith_ShadowHomunculous",
+      "desc": "The first @NumWraiths@ Wraith champions to die each combat summon a monstrosity from the Shadow Realm. Gain a Jhin and Zac.",
+      "effects": {
+        "NumWraiths": 3,
+        "{4335ed7e}": 0.20000000298023224,
+        "{43d33725}": 300,
+        "{8d35ce32}": 400
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_StarGuardianCrown",
+      "desc": "Gain a Star Guardian Emblem, a Steadfast Heart, and a Rell.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SentaiRanger_BeTheHead",
+      "desc": "The Mighty Mech gains @Health@ Health, @DA*100@% Damage Amp, and @DR*100@% Durability. Gain a Yone.<br><br>Field 7 Mighty Mech, reach level 10, and hold all 3 Mighty Mech Augments to activate MECHA-MERGE PROTOCOL.",
+      "effects": {
+        "DA": 0.15000000596046448,
+        "DR": 0.15000000596046448,
+        "Health": 350.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_MightyMech_PowerUpload",
+      "desc": "You can give the Mighty Mech a Power Up. When it has Power Up the Mighty Mech gains @Health@ Health and @DamageAmp*100@% Damage Amp.<br><br>Gain an Aatrox, a Senna, and a Power Remover.",
+      "effects": {
+        "DamageAmp": 0.10000000149011612,
+        "Health": 150
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_Protector_PreemptiveProtection",
+      "desc": "Combat start: Protectors shield themselves and their closest ally for @ShieldPercentAmount*100@% of their maximum health. Shields stack. Gain a Rakan.",
+      "effects": {
+        "ShieldPercentAmount": 0.14000000059604645
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_ZacCarry",
+      "desc": "Gain a Zac. Your strongest Zac becomes a Specialist. He now bounces around the battlefield dealing damage in a one hex radius.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Mentor_TeachersCouncil",
+      "desc": "Mentor bonuses are granted to your team regardless of how many Mentors you play. Gain a Kobuko.",
+      "effects": {
+        "BonusIncrease": null
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_EmpyreanCrest",
+      "desc": "Gain a Wraith Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ProtectorCirclet",
+      "desc": "Gain a Protector Emblem, a Neeko, and a Giant's Belt.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Strategist_GamePlan",
+      "desc": "Mark 1 hex per Strategist fielded. Allies standing in marked hexes gain @FlatHealth@ Health and @BonusDamage*100@% Damage Amp, Strategists gain @PercentIncrease*100@% more. Gain a Janna and Ziggs.",
+      "effects": {
+        "BonusDamage": 0.11999999731779099,
+        "FlatHealth": 150,
+        "PercentIncrease": 1.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_EdgelordCrest",
+      "desc": "Gain an Edgelord Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SniperCirclet",
+      "desc": "Gain a Sniper Emblem, a Jinx, and a Recurve Bow.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Luchador_TournamentTitans",
+      "desc": "Luchadors gain @BaselineAS*100@% Attack Speed. Whenever you win player combats, Luchadors grow in size and permanently gain @ADPerWin@ Attack Damage and @HealthPerWin@ Health.  Gain a Dr Mundo and Gnar.<br><br>(Total: @TFTUnitProperty.:TFT15_Augment_Luchador_TournamentTitan_AD@% AD; @TFTUnitProperty.:TFT15_Augment_Luchador_TournamentTitan_Health@ Health)",
+      "effects": {
+        "ADPerWin": 2.0,
+        "BaselineAS": 0.05000000074505806,
+        "HealthPerWin": 30,
+        "SizeCap": 0.5
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_DestroyerCirclet",
+      "desc": "Gain an Executioner Emblem, an Akali, and a Sparring Gloves.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_BastionCrown",
+      "desc": "Gain a Bastion Emblem, a Crownguard, and a Swain.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SupremeCellsCrown",
+      "desc": "Gain a Supreme Cells Emblem, a Last Whisper, and a Kai'sa.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_EdgelordCirclet",
+      "desc": "Gain an Edgelord Emblem, a Samira, and a Recurve Bow.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Sorcerer_DazzlingDisplay",
+      "desc": "Enemies who take damage from Sorcerer Abilities deal @DamageReduction*100%@ less damage for @Duration@ seconds. Gain a Lux and a Lucian.",
+      "effects": {
+        "DamageReduction": 0.20000000298023224,
+        "Duration": 6.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_EmpyreanCirclet",
+      "desc": "Gain a Wraith Emblem and a K'Sante.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_RingKingCrown",
+      "desc": "Gain a Luchador Emblem, a Sterak's Gage, and a Dr Mundo.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ProtectorCrown",
+      "desc": "Gain a Protector Emblem, a Protector's Vow, and a Neeko.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_HeavyweightCrest",
+      "desc": "Gain a Heavyweight Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_StarGuardian_TinyTeam",
+      "desc": "When you field @MaxStarGuardians@ or less Star Guardians, increase Star Guardian bonuses by @BonusIncrease*100@%. Gain a Syndra and Rell.",
+      "effects": {
+        "BonusIncrease": 2.0,
+        "MaxStarGuardians": 3
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_ViCarry",
+      "desc": "Gain a Vi. Your strongest Vi becomes an Attack Fighter and has a chance to drop loot on kill. She now deals heavy single target damage and gains Attack Damage for item components equipped on your team. ",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_EmpyreanCrown",
+      "desc": "Gain a Wraith Emblem, a Hextech Gunblade, and a Malzahar.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Wraith_DeepeningShadows",
+      "desc": "At combat start and whenever the Shadow Realm strikes, Wraith champions gain @AD*100@% Attack Damage and @AP@ Ability Power. Gain a Jhin and Zac.",
+      "effects": {
+        "AD": 0.05999999865889549,
+        "AP": 6.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_JuggernautCrown",
+      "desc": "Get a Juggernaut Emblem, a Spirit Visage, and a Dr. Mundo.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_StarGuardianCirclet",
+      "desc": "Gain a Star Guardian Emblem and a Rell.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SoulFighterCirclet",
+      "desc": "Gain a Soul Fighter Emblem and a Kalista.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ProdigyCrest",
+      "desc": "Gain a Prodigy Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_BattleAcademiaCrest",
+      "desc": "Gain a Battle Academia Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ProdigyCirclet",
+      "desc": "Gain a Prodigy Emblem, a Malzahar, and a Needlessly Large Rod.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SoulFighter_TournamentFavorites",
+      "desc": "Soul Fighters gain Fame when they deal damage. Each Fame breakpoint grants loot. Gain a Naafiri and Kalista.<br><br>Fame: @TFTUnitProperty.:TFT15_Augment_SoulFighter_TournamentFavorites_Damage@/@TFTUnitProperty.:TFT15_Augment_SoulFighter_TournamentFavorites_Breakpoint@",
+      "effects": {
+        "Breakpoint1": 1000,
+        "Breakpoint2": 5000,
+        "Breakpoint3": 10000,
+        "Breakpoint4": 25000,
+        "Breakpoint5": 60000,
+        "Breakpoint6": 100000,
+        "Breakpoint7": 130000
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_SentaiRanger_BeTheHead_Gold",
+      "desc": "The Mighty Mech gains @Health@ Health, @DA*100@% Damage Amp, and @DR*100@% Durability.<br><br>Field 7 Mighty Mech, reach level 10, and hold all 3 Mighty Mech Augments to activate MECHA-MERGE PROTOCOL.",
+      "effects": {
+        "DA": 0.10000000149011612,
+        "DR": 0.10000000149011612,
+        "Health": 250.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_SentaiCrest",
+      "desc": "Gain a Mighty Mech Crest.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_StrategistCrest",
+      "desc": "Gain a Strategist Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Duelist_AdaptiveStyle",
+      "desc": "On attack, Duelists gain @OffensiveStats*100@ Attack Damage and Ability Power, stacking up to @MaxStacks@ times. Duelist Tanks instead gain @DefensiveStats@ Armor and Magic Resist. Gain a Kai'Sa and Kayle.",
+      "effects": {
+        "DefensiveStats": 2.0,
+        "MaxStacks": 15.0,
+        "OffensiveStats": 0.019999999552965164
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_ChallengerCrown",
+      "desc": "Gain a Duelist Emblem, a Kraken's Fury, and a Gangplank.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_BattleAcademia_TransferStudents",
+      "desc": "At the start of every stage and after every carousel round, gain @NumChamps@ random 1-3 cost Battle Academia champions. Gain an Ezreal.",
+      "effects": {
+        "NumChamps": 2
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_CrystalRoseCrown",
+      "desc": "Gain a Crystal Gambit Emblem, an Adaptive Helm, and a Janna.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_RingKingCirclet",
+      "desc": "Gain a Luchador Emblem and a Dr Mundo.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_Sniper_PreciseShot",
+      "desc": "Every @Cadence@ seconds, all Sniper champions fire a shot that deals @BaseADPercent*100@% of their Basic Attack Damage to the lowest health enemy in range. Gain a Jhin.",
+      "effects": {
+        "BaseADPercent": 0.8500000238418579,
+        "Cadence": 4.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_DestroyerCrest",
+      "desc": "Gain an Executioner Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_ShenCarry",
+      "desc": "Gain a Shen. Your strongest Shen becomes a ranged Marksman gaining +3 Range. His ability no longer shields but instead deals additional damage.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SniperCrest",
+      "desc": "Gain a Sniper Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_GarenCarry",
+      "desc": "Gain a Garen. Your strongest Garen becomes a Fighter. He no longer Heals, but deals more damage and executes weak enemies.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_MightyMech_MultiMech",
+      "desc": "You no longer gain the Mighty Mech. Instead, all Mighty Mech champions gain @MechStatPercentage*100@% of the Health, Ability Power, and Attack Damage the Mech would have.<br><br>Gain an Aatrox.",
+      "effects": {
+        "MechStatPercentage": 0.4000000059604645
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_SentaiRanger_BeTheArms",
+      "desc": "The Mighty Mech gains @BonusAS*100@% Attack Speed.<br><br>Field 7 Mighty Mech, reach level 10, and hold all 3 Mighty Mech Augments to activate MECHA-MERGE PROTOCOL.",
+      "effects": {
+        "BonusAS": 0.44999998807907104
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_SoulFighter_SoulSurge",
+      "desc": "When they hit Max Power, Soul Fighters gain @AS*100@% Attack Speed and @Durability*100@% Durability for @Duration@ seconds.",
+      "effects": {
+        "AS": 0.44999998807907104,
+        "Durability": 0.10000000149011612,
+        "Duration": 5.0
+      }
+    },
+    {
+      "apiName": "TFT15_Augment_SoulFighterCrest",
+      "desc": "Gain a Soul Fighter Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SpellslingerCirclet",
+      "desc": "Gain an Sorcerer Emblem, a Karma, and a Tear of the Goddess.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_SupremeCellsCrest",
+      "desc": "Gain a Supreme Cells Emblem.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Item_EdgelordEmblemItem",
+      "desc": "The holder gains the Edgelord trait.<br>Dealing physical damage to an enemy reduces their Armor by @ArmorPerDamage@.",
+      "effects": {
+        "AD": 0.10000000149011612,
+        "ArmorPerDamage": 2.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_SpellslingerEmblemItem",
+      "desc": "The holder gains the Sorcerer trait.<br>The holder gains @APIncrease*100@% more Ability Power from all sources.",
+      "effects": {
+        "AP": 10.0,
+        "APIncrease": 0.18000000715255737
+      }
+    },
+    {
+      "apiName": "TFT15_Item_BastionEmblemItem",
+      "desc": "The holder gains the Bastion trait.<br>Gain @ResistConversionToADRatio*100@% of Armor as Attack Damage.<br>Gain @ResistConversionToAPRatio*100@% of Magic Resistance as Ability Power.",
+      "effects": {
+        "Armor": 20.0,
+        "ResistConversionToADRatio": 0.15000000596046448,
+        "ResistConversionToAPRatio": 0.15000000596046448
+      }
+    },
+    {
+      "apiName": "TFT15_Item_ProdigyEmblemItem",
+      "desc": "The holder gains the Prodigy trait.<br>On cast, shield the lowest percent Health ally for @ManaConversion*100@% of mana spent.",
+      "effects": {
+        "ManaConversion": 2.5,
+        "ManaRegen": 1.0,
+        "{3777fe40}": 1
+      }
+    },
+    {
+      "apiName": "TFT15_Item_BattleAcademiaEmblemItem",
+      "desc": "The holder gains the Battle Academia trait, and @HealthPerPotential@ Health and @DAPerPotential*100@% Damage Amp per %i:set14AmpIcon%.",
+      "effects": {
+        "DAPerPotential": 0.05999999865889549,
+        "HealthPerPotential": 120.0,
+        "ManaRegen": 1.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_HeavyweightEmblemItem",
+      "desc": "The holder gains the Heavyweight trait, and gains @HealthPerTakedown@ max Health on takedown.",
+      "effects": {
+        "Health": 150.0,
+        "HealthPerTakedown": 150,
+        "{9b864d6c}": 0.10000000149011612
+      }
+    },
+    {
+      "apiName": "TFT15_Item_JuggernautEmblemItem",
+      "desc": "The holder gains the Juggernaut trait.<br>While above @HealthBreakpoint*100@% Health, gain @AttackSpeed*100@% Attack Speed.",
+      "effects": {
+        "AttackSpeed": 0.30000001192092896,
+        "HealthBreakpoint": 0.5,
+        "MagicResist": 20.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_ProtectorEmblemItem",
+      "desc": "The holder gains the Protector trait.<br>When a shield on the holder breaks, heal the holder and the nearest ally for @HealPercent@% of the shield's initial value.",
+      "effects": {
+        "HealPercent": 20.0,
+        "Health": 150.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_CrystalRoseEmblemItem",
+      "desc": "The holder gains the Crystal Gambit trait.",
+      "effects": {
+        "Health": 150.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_ChallengerEmblemItem",
+      "desc": "The holder gains the Duelist trait.<br><br>Attacks deal @BaseTrueDamage@ bonus true damage, plus @BonusTrueDamage@ bonus true damage for each time the target was damaged by this effect.",
+      "effects": {
+        "AS": 10.0,
+        "BaseTrueDamage": 12,
+        "BonusTrueDamage": 6
+      }
+    },
+    {
+      "apiName": "TFT15_Item_DestroyerEmblemItem",
+      "desc": "The holder gains the Executioner trait.<br>Attacks and Abilities that critically strike deal @BleedDamage*100@% bonus true damage over @BleedDuration@ seconds.",
+      "effects": {
+        "BleedDamage": 0.20000000298023224,
+        "BleedDuration": 3.0,
+        "CritChance": 20.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_SoulFighterEmblemItem",
+      "desc": "The holder gains the Soul Fighter trait.",
+      "effects": {
+        "AD": 0.10000000149011612
+      }
+    },
+    {
+      "apiName": "TFT15_Item_SupremeCellsEmblemItem",
+      "desc": "The holder gains the Supreme Cells trait.",
+      "effects": {
+        "AS": 10.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_EmpyreanEmblemItem",
+      "desc": "The holder gains the Wraith trait.",
+      "effects": {
+        "Armor": 20.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_ShotcallerEmblemItem",
+      "desc": "The holder gains the Strategist trait.<br><br>Combat Start: The holder and allies within @NumHexes@ hex in the same row gain bonuses.<br>Front 2 rows: @ResistBuff@ Armor and Magic Resist<br>Back 2 rows: @ASBuff*100@% Attack Speed<br>",
+      "effects": {
+        "ASBuff": 0.15000000596046448,
+        "MagicResist": 20.0,
+        "NumHexes": 1,
+        "ResistBuff": 20
+      }
+    },
+    {
+      "apiName": "TFT15_Item_SniperEmblemItem",
+      "desc": "The holder gains the Sniper trait and @Range@ range.",
+      "effects": {
+        "Health": 150.0,
+        "Range": 2
+      }
+    },
+    {
+      "apiName": "TFT15_Item_RingKingsEmblemItem",
+      "desc": "The holder gains the Luchador trait.",
+      "effects": {
+        "CritChance": 20.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_StarGuardianEmblemItem",
+      "desc": "The holder gains the Star Guardian trait.<br><br><TFTBonus>Teamwork: </TFTBonus> Non-emblem Star Guardian bonuses are increased by @Percent@%. This effect stacks.<br><br><tftitemrules>[Unique - only 1 per champion.]</tftitemrules>",
+      "effects": {
+        "AP": 10.0,
+        "percent": 10
+      }
+    },
+    {
+      "apiName": "TFT15_Mecha_RebootProtocol",
+      "desc": "tft_item_description_RebootProtocol",
+      "effects": {
+        "AD": 0.3499999940395355,
+        "AS": 15.0,
+        "HealDuration": 3.0,
+        "{77134cd4}": 0.5,
+        "{ffd80251}": 0.20000000298023224
+      }
+    },
+    {
+      "apiName": "TFT15_Mecha_UpgradeModule",
+      "desc": "tft_item_description_UpgradeModule",
+      "effects": {
+        "NumRounds": 2,
+        "{56aa2787}": 0.25
+      }
+    },
+    {
+      "apiName": "TFT15_Mecha_FluxEngine",
+      "desc": "tft_item_description_FluxEngine",
+      "effects": {
+        "AP": 20.0,
+        "APPerCast": 20.0,
+        "Mana": 15.0,
+        "NumCasts": 3.0,
+        "NumEnemies": 3,
+        "{45761774}": 3.0
+      }
+    },
+    {
+      "apiName": "TFT15_Mecha_OperatingSystem",
+      "desc": "tft_item_description_TFT15_Mecha_OperatingSystem",
+      "effects": {
+        "AD": 0.15000000596046448,
+        "AP": 15.0,
+        "Health": 200.0,
+        "{5778fde7}": 0.699999988079071
+      }
+    },
+    {
+      "apiName": "TFT15_Mecha_ChernoAftermath",
+      "desc": "tft_item_description_ChernoAftermath",
+      "effects": {
+        "BaseDurability": 0.10000000149011612,
+        "Health": 1000.0,
+        "HexRadius": 2,
+        "PercentMaxHealth": 0.3499999940395355
+      }
+    },
+    {
+      "apiName": "TFT15_Mecha_Railgun",
+      "desc": "tft_item_description_Railgun",
+      "effects": {
+        "AD": 0.44999998807907104,
+        "HexRadius": 2,
+        "{2ef1b400}": 1.2000000476837158,
+        "{f483ae27}": 0.25
+      }
+    },
+    {
+      "apiName": "TFT15_Mecha_VoltaicBattery",
+      "desc": "tft_item_description_VoltaicBattery",
+      "effects": {
+        "AS": 50.0,
+        "BurstAS": 2.0,
+        "BurstDuration": 2.0,
+        "Cadence": 5.0
+      }
+    },
+    {
+      "apiName": "TFT15_Mecha_NanoFabricator",
+      "desc": "tft_item_description_NanoFabricator",
+      "effects": {
+        "AD": 0.10000000149011612,
+        "ADPerStarLevel": 0.05000000074505806,
+        "AP": 10.0,
+        "APPerStarLevel": 5.0,
+        "{7b8ae266}": 1
+      }
+    },
+    {
+      "apiName": "TFT15_CrystalRose_Pass",
+      "desc": "Increase Gem Power gains for the next 4 player combats. If you win, lose a large amount of your Gem Power<showIfNot.TFT15_CrystalGambit_HasDiamondHands> and immediately cash out</showIfNot.TFT15_CrystalGambit_HasDiamondHands>.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_CrystalRose_Pass_PVE_Item",
+      "desc": "tft_item_TFT15_CrystalGambit_PVE",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_CrystalRose_Cashout",
+      "desc": null,
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Augment_CrystalGambit_DiamondHands_Continue",
+      "desc": null,
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_10",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_5",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_4",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_7",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_6",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Consumable_2",
+      "desc": "<spellPassive>Power Up:</spellPassive> Use on a champion to choose a Power Up! Sell that champion or use a Power Remover to regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_3",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_2",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_9",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover_8",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Consumable",
+      "desc": "<spellPassive>Power Up:</spellPassive> Use on a champion to choose a Power Up! Sell that champion or use a Power Remover to regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_Remover",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_HiddenTech_FlameAffinity",
+      "desc": "<TFTKeyword>Wounded</TFTKeyword> allies gain @WoundDamageAmp*100@% %i:scaleDA%.<br><br><tftitemrules>Wound: Reduce healing received by 50%</tftitemrules>",
+      "effects": {
+        "Health": 250.0,
+        "WoundDamageAmp": 0.20000000298023224
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_DormantProphecy",
+      "desc": "Combat Start: If the holder is 3 star, they star up.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_HiddenTech_SoulOfASentinel",
+      "desc": "TFT15_HiddenTech_SoulOfASentinel_Desc",
+      "effects": {
+        "Armor": 20.0,
+        "Health": 250,
+        "MagicResist": 20.0
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_FireStorm",
+      "desc": "<spellPassive>Combat Start:</spellPassive> <TFTKeyword>Wound</TFTKeyword> all enemies for @Duration@ seconds.<br><br><tftitemrules>Wound: Reduce healing received by 50%</tftitemrules>",
+      "effects": {
+        "Duration": 10.0,
+        "Health": 250.0
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_StoneSkin",
+      "desc": "Gain @Armor@ Armor.",
+      "effects": {
+        "Armor": 150.0
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_LimitBreak",
+      "desc": "Gain @AbilityPower@ Ability Power & @AttackDamage@% Attack Damage. Triple it when below @HealthThreshold@% Health.",
+      "effects": {
+        "AbilityPower": 20.0,
+        "AttackDamage": 20.0,
+        "HealthThreshold": 50.0,
+        "Multiplier": 3.0
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_ShatterSweep",
+      "desc": "Allies that start combat in the back @NumRow@ rows @ArmorReduction*100@% <TFTKeyword>Sunder</TFTKeyword> enemies for @Duration@ seconds when dealing physical damage.<br><br><tftitemrules><tftbold>Sunder</tftbold>: Reduce Armor</tftitemrules>",
+      "effects": {
+        "ArmorReduction": 0.20000000298023224,
+        "Duration": 5.0,
+        "Health": 250,
+        "NumRow": 2
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_UnyieldingCovenant",
+      "desc": "This champion is <TFTKeyword>Untargetable</TFTKeyword> while at least @NumAlliesAlive@ allies are alive (does not include the holder).",
+      "effects": {
+        "NumAlliesAlive": 3
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_ArcaneRend",
+      "desc": "Allies that start combat in the back @NumRow@ rows @MRReduction*100@% <TFTKeyword>Shred</TFTKeyword> enemies for @Duration@ seconds when dealing magic damage.<br><br><tftitemrules><tftbold>Shred</tftbold>: Reduce Magic Resist</tftitemrules>",
+      "effects": {
+        "Duration": 5.0,
+        "Health": 250,
+        "MRReduction": 0.20000000298023224,
+        "NumRow": 2
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_Test1",
+      "desc": "Use your Power Snax on a champion to unlock Power Ups.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_HiddenTech_SoulOfAStarGuardian",
+      "desc": "TFT15_HiddenTech_SoulOfAStarGuardian_Desc",
+      "effects": {
+        "Health": 250,
+        "{1543aa48}": 0.15000000596046448
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_FusionHex",
+      "desc": "<spellPassive>Combat Start:</spellPassive> Merge with the nearest ally gaining @StatPercent*100@% of their Health, Attack Damage, Ability Power.",
+      "effects": {
+        "Health": null,
+        "StatPercent": 0.5
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_ShieldMelt",
+      "desc": "Combat Start: Your team deals @BonusDamage@% bonus damage to shielded enemies.",
+      "effects": {
+        "BonusDamage": 30.0,
+        "Health": 250
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_AffinityForCold",
+      "desc": "Combat Start: Chill all enemies in the back 2 rows<br><br><tftitemrules>Chill: Reduce healing received by 20%</tftitemrules>",
+      "effects": {
+        "Duration": 8.0,
+        "Health": 250,
+        "NumRow": 2
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_TrainingWeights",
+      "desc": "This champion receives a penalty for @NumRounds@ rounds losing -@DamagePenalty*100@% %i:scaleDA% and -@DurabilityPenalty*100@% %i:scaleDR% and capping their Attack Speed to @ASCapPenality@.<br><br>After @NumRounds@ rounds, remove the penalty and instead gain @ASReward*100@% %i:scaleAS% and @DamageReward*100@% %i:scaleDA%.<br><br><rules>Rounds are tracked per Champion.</rules>",
+      "effects": {
+        "ASCapPenality": 0.5,
+        "ASReward": 0.8999999761581421,
+        "DamagePenalty": 0.5,
+        "DamageReward": 0.5,
+        "DurabilityPenalty": 0.5,
+        "Health": 100.0,
+        "NumRounds": 5,
+        "{adb8ce88}": 1000.0
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_SoulOfAChallenger",
+      "desc": "TFT15_HiddenTech_SoulOfAChallenger_Desc",
+      "effects": {
+        "AS": 20.0,
+        "Health": 250
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_KiBarrier",
+      "desc": "The holder takes @FlatReducedDamage@ less damage from all sources.",
+      "effects": {
+        "FlatReducedDamage": 25.0,
+        "Health": 300.0
+      }
+    },
+    {
+      "apiName": "TFT15_HiddenTech_PetriciteSkin",
+      "desc": "Gain @MagicResist@ Magic Resist.",
+      "effects": {
+        "MagicResist": 150.0
+      }
+    },
+    {
+      "apiName": "TFT15_General_Consumable_IncreaseThreat",
+      "desc": "tft15_General_itemdescription_IncreaseThreat",
+      "effects": {
+        "StunDuration": 1.0
+      }
+    },
+    {
+      "apiName": "TFT15_General_Consumable_BenchedUnitInCombat",
+      "desc": "tft15_General_itemdescription_BenchedUnitInCombat",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_General_Consumable_ReduceThreat",
+      "desc": "tft15_General_itemdescription_ReduceThreat",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_General_Consumable_JumpToBackline",
+      "desc": "tft15_General_itemdescription_JumpToBackline",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_General_Consumable_GoldOnKill",
+      "desc": "tft15_General_itemdescription_GoldOnKill",
+      "effects": {
+        "{a61b4a72}": 2.0
+      }
+    },
+    {
+      "apiName": "TFT15_General_Consumable_Debuff",
+      "desc": "tft15_General_itemdescription_Debuff",
+      "effects": {
+        "Duration": 4.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_DragonFistFighterStance",
+      "desc": "<spellPassive>Passive:</spellPassive> On attack, deal <physicalDamage>@ModifiedPassiveCloneDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to a nearby enemy.<br><br><spellActive>Active: </spellActive> Strike swiftly, sending <TFTBonus>@ModifiedNumClones@&nbsp;(%i:scaleAS%)</TFTBonus> afterimages to the nearest @NumEnemies@ enemies. Each deals <physicalDamage>@ModifiedCloneDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage and reduces armor by <TFTBonus>@ModifiedArmorShred@&nbsp;(%i:scaleAP%)</TFTBonus>.",
+      "effects": {
+        "ModifiedArmorShred": 5.0,
+        "ModifiedCloneDamage": 65.0,
+        "ModifiedNumClones": 10.0,
+        "ModifiedPassiveCloneDamage": 40.0,
+        "NumEnemies": 2.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_DragonFistTankStance",
+      "desc": "Briefly gain <scaleLevel>@WindowedDR*100@%</scaleLevel> Durability, then deal <physicalDamage>@ModifiedInitialDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the target,  <physicalDamage>@ModifiedFinalDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to all enemies behind the target, and <physicalDamage>@ModifiedAllEnemiesDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to other enemies in a 2-hex radius.",
+      "effects": {
+        "ModifiedAllEnemiesDamage": 150.0,
+        "ModifiedFinalDamage": 200.0,
+        "ModifiedInitialDamage": 500.0,
+        "WindowedDR": 0.6000000238418579
+      }
+    },
+    {
+      "apiName": "TFT15_Item_DragonFistReaperStance",
+      "desc": "Deal <physicalDamage>@ModifiedStrikeDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the lowest Health enemy within @HexRange@ hexes and <TFTKeyword>Stun</TFTKeyword> them for @StunDuration@ seconds. Other enemies in a 1-hex radius take <physicalDamage>@ModifiedAOEDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage. <br><br>After @NumKills@ kills with this ability all enemies instantly take <physicalDamage>@ModifiedShockwaveDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage and are <TFTKeyword>Stunned</TFTKeyword> for @KillStunDuration@ seconds.",
+      "effects": {
+        "HexRange": 3.0,
+        "KillStunDuration": 1.5,
+        "ModifiedAOEDamage": 130.0,
+        "ModifiedShockwaveDamage": 180.0,
+        "ModifiedStrikeDamage": 330.0,
+        "NumKills": 3.0,
+        "StunDuration": 1.5
+      }
+    },
+    {
+      "apiName": "TFT15_RoboRanger_Core",
+      "desc": "Mighty Mech champions heal The Mighty Mech for @TFTUnitProperty.Item:TFT15_SentaiRanger_GalioHealRatio@% of the damage they deal.<br><br><rules>By our powers combined!</rules>",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_MonsterTrainerChoice_Rammus",
+      "desc": null,
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_RoboRanger_Slicer",
+      "desc": "Deal an additional @PercentTrueDamage*100@% of all damage dealt as true damage.<br><br><rules>Bring down the blade of justice!</rules>",
+      "effects": {
+        "AS": 25.0,
+        "PercentTrueDamage": 0.10000000149011612,
+        "StatOmnivamp": 0.10000000149011612
+      }
+    },
+    {
+      "apiName": "TFT15_Item_LimitBreak",
+      "desc": "tft15_LimitBreak_Item_description",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_Item_Underdogs_ChampionsBelt",
+      "desc": "tft15_itemdescription_ChampionsBelt",
+      "effects": {
+        "AD": 0.15000000596046448,
+        "AP": 15.0,
+        "Armor": 15.0,
+        "DamageThreshold": 5000,
+        "Health": 150.0,
+        "MagicResist": 15.0,
+        "{17e23813}": 2,
+        "{75f158f6}": 1
+      }
+    },
+    {
+      "apiName": "TFT15_MonsterTrainerChoice_Smolder",
+      "desc": null,
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_RoboRanger_Sword",
+      "desc": "Attacks now cleave in a cone dealing @ADPercent*100@% physical damage to adjacent enemies.<br><br><rules>We slice through evil with unbreakable resolve.</rules>",
+      "effects": {
+        "AD": 0.25,
+        "ADPercent": 0.5,
+        "{b75d6a7b}": 1
+      }
+    },
+    {
+      "apiName": "TFT15_Item_BattleQueen_Crown",
+      "desc": "tft15_itemdescription_BattleQueenCrown",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_MonsterTrainerChoice_KogMaw",
+      "desc": null,
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_MechanicTrait_BloodFury_Consumable",
+      "desc": "Consume @HealthToFeed@ player health for Health&nbsp;%i:scaleHealth%, Attack Damage&nbsp;%i:scaleAD% and Ability Power&nbsp;%i:scaleAP%.",
+      "effects": {
+        "HealthToFeed": 3.0
+      }
+    },
+    {
+      "apiName": "TFT15_Item_CrystalRoseHellionItem",
+      "desc": "Your team gains @Health@ health. Whenever a unit dies, a crystalline copy one star level lower joins the fight!",
+      "effects": {
+        "Health": 1000
+      }
+    },
+    {
+      "apiName": "TFT15_MechanicTrait_ExpungePowerItem",
+      "desc": "Use on a champion to remove their Power Up and regain a Power Snax.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_SetMechanic_KeepCurrentOption",
+      "desc": "TFT15_SetMechanic_KeepCurrentOption_Desc",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT15_HiddenTech_ItemData",
+      "desc": "TFT15_HiddenTech_ShopData_Description",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT_Augment_Isekai_Sorcerer",
+      "desc": "Summon a magical hero from another universe to fight for you. This hero is a  <TFTRadiantItemBonus>Sorcerer</TFTRadiantItemBonus> this game.",
+      "effects": {}
+    },
+    {
+      "apiName": "TFT_Augment_AimForTheTop",
+      "desc": "You are more likely to fight stronger players, and you know who you will fight. When you lose, gain @XP@ XP. Every @WinsPerComponent@ wins, gain a component.<br><br><rules>Foes vanquished: @TFTUnitProperty.item:TFT15_AimForTheTop_EnemiesBeaten@</rules>",
+      "effects": {
+        "WinsPerComponent": 3,
+        "XP": 2
+      }
+    },
+    {
+      "apiName": "TFT_Augment_Isekai_Prodigy",
+      "desc": "Summon a magical hero from another universe to fight for you. This hero is a  <TFTRadiantItemBonus>Prodigy</TFTRadiantItemBonus> this game.<br><br>",
+      "effects": {}
+    }
+  ]
+}

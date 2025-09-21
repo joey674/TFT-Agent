@@ -1,6 +1,6 @@
 // State service: parse parser(formatted string) outputs only.
 // Now handles: Gold, Shop, Bench, Board sections.
-import { generateCompMatchReport } from "./App-CompMatch.js";
+import { generateCompMatchReport } from "./comps-matcher.js";
 
 const DEFAULT_HISTORY_LIMIT = 200;
 
@@ -18,6 +18,8 @@ class StateService {
       shop: [], // [{ slot, name }]
       bench: [], // [{ slot, name, level, items: [] }]
       board: [], // [{ cell, name, level, items: [] }]
+      stage: null, // e.g., from "Round Type: 1-4 ..." => 1
+      round: null, // e.g., from "Round Type: 1-4 ..." => 4
     };
   }
 
@@ -43,6 +45,7 @@ class StateService {
       this._latest.gold = Number(data.gold);
       return;
     }
+
     return;
   }
 
@@ -50,7 +53,7 @@ class StateService {
   getCompMatch(topN = 3) {
     console.log("getCompMatch");
     const currentTeam = this.getComp();
-    return generateCompMatchReport(currentTeam, topN);
+    return generateCompMatchReport(currentTeam, topN, this._latest.stage);
   }
 
   // 解析 Gold / Shop / Bench / Board
@@ -66,6 +69,25 @@ class StateService {
       if (Number.isFinite(n)) lastGold = n;
     }
     if (lastGold !== null) this._latest.gold = lastGold;
+
+    // 1b) Round Type: capture stage-round (e.g., 1-4) and persist stage/round numbers
+    // Accepts formats like: "Round Type: 1-4 PVE (PVE)" or "Round Type: 2-7 ..."
+    const rtRegex = /^Round Type:\s*(.*?)\s*$/gim;
+    let lastSR = null;
+    let mrt;
+    while ((mrt = rtRegex.exec(formatted)) !== null) {
+      const body = String(mrt[1] ?? "");
+      const m = /(\d+)\s*-\s*(\d+)/.exec(body);
+      if (m) lastSR = { s: Number(m[1]), r: Number(m[2]) };
+    }
+    if (lastSR) {
+      this._latest.stage = Number.isFinite(lastSR.s)
+        ? lastSR.s
+        : this._latest.stage;
+      this._latest.round = Number.isFinite(lastSR.r)
+        ? lastSR.r
+        : this._latest.round;
+    }
 
     // 2) Section parsing (Shop / Bench / Board)
     const lines = formatted.split(/\r?\n/);
@@ -261,7 +283,14 @@ class StateService {
 
   clear() {
     this._infoUpdates = [];
-    this._latest = { gold: null, shop: [], bench: [], board: [] };
+    this._latest = {
+      gold: null,
+      shop: [],
+      bench: [],
+      board: [],
+      stage: null,
+      round: null,
+    };
   }
 
   // Helpers

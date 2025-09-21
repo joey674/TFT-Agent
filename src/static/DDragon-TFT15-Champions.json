@@ -1,0 +1,911 @@
+{
+  "champions": [
+    {
+      "ability": {
+        "desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose."
+      },
+      "characterName": "TFT5_EmblemArmoryKey",
+      "cost": 8,
+      "role": null,
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Drag this to the Shop to open an Armory full of completed items! You will have 30 seconds to choose."
+      },
+      "characterName": "TFT_ArmoryKeyCompleted",
+      "cost": 8,
+      "role": null,
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Drag this to the Shop to open an Armory full of component items! You will have 30 seconds to choose."
+      },
+      "characterName": "TFT_ArmoryKeyComponent",
+      "cost": 8,
+      "role": null,
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Drag this to the Shop to open an Armory full of Artifact items! You will have 30 seconds to choose."
+      },
+      "characterName": "TFT_ArmoryKeyOrnn",
+      "cost": 8,
+      "role": null,
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Drag this to the Shop to open an Armory full of Support items! You will have 30 seconds to choose."
+      },
+      "characterName": "TFT_ArmoryKeySupport",
+      "cost": 8,
+      "role": null,
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "This chest stores all of the accumulated loot you've collected. Win a combat against a player to open it!"
+      },
+      "characterName": "TFT6_MercenaryChest",
+      "cost": 11,
+      "role": null,
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Heal <scaleHealth>@TotalHealing@&nbsp;(%i:scaleAP%%i:scaleHealth%)</scaleHealth> and deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the current target. Healing and damage are increased by up to @AmountIncreaseMax*100@% based on Aatrox's missing health.<br>"
+      },
+      "characterName": "TFT15_Aatrox",
+      "cost": 1,
+      "role": "ADTank",
+      "traits": [
+        "Mighty Mech",
+        "Juggernaut",
+        "Heavyweight"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to the current target, increased up to @MaxDamageAmp*100@% based on the target's missing health.<br><br>If the target dies, deal @OverkillPercent*100@% of overkill damage split between the @OverkillTargetSpreadCount@ closest enemies, plus <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage per target."
+      },
+      "characterName": "TFT15_Ahri",
+      "cost": 3,
+      "role": "APCaster",
+      "traits": [
+        "Star Guardian",
+        "Sorcerer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Mark the farthest unmarked target within @HexSearchRange@ hexes, then dash through all marked enemies in order. Each dash deals <magicDamage>@Total_Strike_Damage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to its target and <magicDamage>@Total_Dash_Damage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to other enemies hit.<br><br>If only one enemy remains, dash @SingleEnemyDashes@ times instead"
+      },
+      "characterName": "TFT15_Akali",
+      "cost": 4,
+      "role": "APFighter",
+      "traits": [
+        "Supreme Cells",
+        "Executioner"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "The next @AttackCount@ attacks fire bonus arrows dealing <physicalDamage>@TotalDamage@ (%i:scaleAD%%i:scaleAP%%i:scaleAS%)</physicalDamage> total physical damage split between the target and up to two random enemies within 2 hexes."
+      },
+      "characterName": "TFT15_Ashe",
+      "cost": 4,
+      "role": "ADCarry",
+      "traits": [
+        "Crystal Gambit",
+        "Duelist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<TFTKeyword>Stun</TFTKeyword> the target and spin them around for @Duration@ seconds, dealing <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to the target and <physicalDamage>@ModifiedAOEDamage@&nbsp;(%i:scaleAD%)</physicalDamage> to other enemies in a @Radius_INSCRIPT_FORTOOLTIPONLY@-hex radius. <br><br>Then throw the target forward, dealing <physicalDamage>@ModifiedThrowDamage@&nbsp;(%i:scaleAD%)</physicalDamage> in a 1-hex area around the target. If the target drops below <TFTBonus>@ExecuteThreshold@</TFTBonus> (%i:scaleAP%) health, throw them off the board instead."
+      },
+      "characterName": "TFT15_Braum",
+      "cost": 5,
+      "role": "ADFighter",
+      "traits": [
+        "The Champ",
+        "Luchador",
+        "Bastion"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Fire a bullet at the farthest enemy, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the first target hit. The bullet bounces to a nearby enemy, dealing <physicalDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage.<br><br><mainText enabled=TFT15_BattleAcademia_IsActive alternate=rules><spellActive enabled=TFT15_BattleAcademia_IsActive alternate=rules>Potential (@TFTUnitProperty.:TFT15_BattleAcademia_CurrentPotential@%i:set14AmpIcon%): </spellActive><TFTBonus><ShowIfNot.TFT15_BattleAcademia_IsActive></ShowIfNot.TFT15_BattleAcademia_IsActive><ShowIf.TFT15_BattleAcademia_IsActive></ShowIf.TFT15_BattleAcademia_IsActive></TFTBonus>@TFTUnitProperty.:TFT15_BattleAcademia_Caitlyn_FullPotential_TRA@</mainText>"
+      },
+      "characterName": "TFT15_Caitlyn",
+      "cost": 3,
+      "role": "ADCaster",
+      "traits": [
+        "Battle Academia",
+        "Sniper"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Heal <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth>, then deal <physicalDamage>@ModifiedDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the current target, increased by <TFTBonus>@TankDamageIncrease*100@%</TFTBonus> against <TFTKeyword>Tanks</TFTKeyword>. If the target dies, immediately recast dealing <scaleLevel>@PercentDamageFalloff*100@%</scaleLevel> damage."
+      },
+      "characterName": "TFT15_Darius",
+      "cost": 3,
+      "role": "ADFighter",
+      "traits": [
+        "Supreme Cells",
+        "Heavyweight"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Fire a blast at the current target, dealing <magicDamage>@ModifiedAPDamage@ (%i:scaleAP%)</magicDamage> magic damage and <physicalDamage>@ModifiedADDamage@ (%i:scaleAD%)</physicalDamage> physical damage.<br><br><mainText enabled=TFT15_BattleAcademia_IsActive alternate=rules><spellActive enabled=TFT15_BattleAcademia_IsActive alternate=rules>Potential (@TFTUnitProperty.:TFT15_BattleAcademia_CurrentPotential@%i:set14AmpIcon%): </spellActive><TFTBonus><ShowIfNot.TFT15_BattleAcademia_IsActive></ShowIfNot.TFT15_BattleAcademia_IsActive><ShowIf.TFT15_BattleAcademia_IsActive></ShowIf.TFT15_BattleAcademia_IsActive></TFTBonus>@TFTUnitProperty.:TFT15_BattleAcademia_Ezreal_FullPotential_TRA@</mainText>"
+      },
+      "characterName": "TFT15_Ezreal",
+      "cost": 1,
+      "role": "HCaster",
+      "traits": [
+        "Battle Academia",
+        "Prodigy"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Heal <TFTBonus>@TotalHealing@&nbsp;(%i:scaleHealth%%i:scaleAP%)</TFTBonus> and deal <physicalDamage>@AdditionalDamage@&nbsp;(%i:scaleHealth%%i:scaleAD%)</physicalDamage> physical damage to the target.<br><br><mainText enabled=TFT15_BattleAcademia_IsActive alternate=rules><spellActive enabled=TFT15_BattleAcademia_IsActive alternate=rules>Potential (@TFTUnitProperty.:TFT15_BattleAcademia_CurrentPotential@%i:set14AmpIcon%): </spellActive><TFTBonus><ShowIfNot.TFT15_BattleAcademia_IsActive></ShowIfNot.TFT15_BattleAcademia_IsActive><ShowIf.TFT15_BattleAcademia_IsActive></ShowIf.TFT15_BattleAcademia_IsActive></TFTBonus>@TFTUnitProperty.:TFT15_BattleAcademia_Garen_FullPotential_TRA@</mainText>"
+      },
+      "characterName": "TFT15_Garen",
+      "cost": 1,
+      "role": "ADTank",
+      "traits": [
+        "Battle Academia",
+        "Bastion"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Attacks deal <magicDamage>@ModifiedConeDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage, and <magicDamage>@ModifiedConeSplitDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage split between enemies in a cone. Every 3rd cast is Rip the Threads.<br><br><spellActive>Soul Stitch:</spellActive> Fire @NeedleCount@ needles through the board, dealing <magicDamage>@ModifiedNeedleDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to enemies hit and leaving threads behind.<br><br><spellActive>Rip The Threads:</spellActive> Deal <magicDamage>@ModifiedDividedDamage@&nbsp;(%i:scaleAP%)</magicDamage> split between all enemies and <magicDamage>@ModifiedBurstDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage to each. Enemies near at least one thread take @ThreadIncrease*100@% more damage."
+      },
+      "characterName": "TFT15_Gwen",
+      "cost": 5,
+      "role": "APFighter",
+      "traits": [
+        "Soul Fighter",
+        "Sorcerer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Grant <TFTBonus>@ModifiedAllyShield@&nbsp;(%i:scaleAP%)</TFTBonus> shield to the @NumShields@ lowest Health allies for @ShieldDuration@ seconds and fire @NumButterflies@ butterflies dealing <magicDamage>@DamageTotal@&nbsp;(%i:scaleAP%)</magicDamage> magic damage split between the @SpellRangeInEnemies@ closest enemies."
+      },
+      "characterName": "TFT15_Janna",
+      "cost": 2,
+      "role": "APCaster",
+      "traits": [
+        "Crystal Gambit",
+        "Protector",
+        "Strategist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%%i:scaleHealth%)</TFTBonus> Shield for @ShieldDuration@ seconds, then slam into a group of enemies, dealing <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies within a @HexRadius@ hex radius and <TFTKeyword>Stunning</TFTKeyword> them for <scaleLevel>@StunDuration@</scaleLevel> seconds."
+      },
+      "characterName": "TFT15_JarvanIV",
+      "cost": 4,
+      "role": "APTank",
+      "traits": [
+        "Mighty Mech",
+        "Strategist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies in a 1-hex radius centered on the target.<br><br><mainText enabled=TFT15_BattleAcademia_IsActive alternate=rules><spellActive enabled=TFT15_BattleAcademia_IsActive alternate=rules>Potential (@TFTUnitProperty.:TFT15_BattleAcademia_CurrentPotential@%i:set14AmpIcon%): </spellActive><TFTBonus><ShowIfNot.TFT15_BattleAcademia_IsActive></ShowIfNot.TFT15_BattleAcademia_IsActive><ShowIf.TFT15_BattleAcademia_IsActive></ShowIf.TFT15_BattleAcademia_IsActive></TFTBonus>@TFTUnitProperty.:TFT15_BattleAcademia_Jayce_FullPotential_TRA@</mainText>"
+      },
+      "characterName": "TFT15_Jayce",
+      "cost": 3,
+      "role": "ADFighter",
+      "traits": [
+        "Battle Academia",
+        "Heavyweight"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Attack Speed is always <scaleLevel>@AttackSpeed@</scaleLevel>. Convert 1% bonus Attack Speed into 0.8% Attack Damage. Every fourth attack is enhanced to deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage."
+      },
+      "characterName": "TFT15_Jhin",
+      "cost": 2,
+      "role": "ADSpecialist",
+      "traits": [
+        "Wraith",
+        "Sniper"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Attacks grant <TFTBonus>@ModifiedASPerStack@% (%i:scaleAP%)</TFTBonus> stacking Attack Speed, up to <TFTBonus>@ModifiedMaxAS@% (%i:scaleAP%)</TFTBonus>. Critical strikes instead grant <TFTBonus>@ASPerCrit@% (%i:scaleAP%)</TFTBonus>.<br><br><spellActive>Active:</spellActive> Deal <physicalDamage>@ModifiedDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the target and <physicalDamage>@ModifiedRocketAOEDamage@ (%i:scaleAD%)</physicalDamage> physical damage split across a @BigRocketRadius@-hex radius centered on the target."
+      },
+      "characterName": "TFT15_Jinx",
+      "cost": 4,
+      "role": "ADCaster",
+      "traits": [
+        "Star Guardian",
+        "Sniper"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive (ALL OUT):</spellPassive> On first death instead heal to full, gain <TFTBonus>@FlatASBuff*100@% Attack Speed</TFTBonus>, convert <TFTBonus>@DefenseLossRatio*100@%</TFTBonus> of Armor and Magic Resist into Attack Damage, and set max mana to @FighterMaxMana@. Then dash through the target and briefly <TFTKeyword>Stun</TFTKeyword> them. While ALL OUT, lose @AllOutPercentHealthDecay*100@%&nbsp;Health each second and heal <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleHealth%)</scaleHealth> on kill.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedDurability@&nbsp;(%i:scaleAP%)</TFTBonus> Durability for @Duration@ seconds, then deal <physicalDamage>@ModifiedTankDamage@&nbsp;(%i:scaleArmor%%i:scaleMR%)</physicalDamage> physical damage to the target.<br><br><spellActive>Active (ALL OUT):</spellActive> . Deal <physicalDamage>@ModifiedFighterDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to the target."
+      },
+      "characterName": "TFT15_KSante",
+      "cost": 4,
+      "role": "ADTank",
+      "traits": [
+        "Wraith",
+        "Protector"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Kills grant @ADPerKill@% permanent Attack Damage (+@TFTUnitProperty.:TFT15_KaiSaSpell_PermanentAD@% %i:scaleAD%).<br><br><spellActive>Active:</spellActive> Fire 8 missiles divided between the target and nearby enemies. Each missile deals <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage."
+      },
+      "characterName": "TFT15_KaiSa",
+      "cost": 2,
+      "role": "ADCarry",
+      "traits": [
+        "Supreme Cells",
+        "Duelist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Hurl a spear at the farthest enemy, dealing <physicalDamage>@TotalDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the first enemy hit. If the enemy dies the spear continues, dealing overkill damage to the next enemy hit."
+      },
+      "characterName": "TFT15_Kalista",
+      "cost": 1,
+      "role": "ADCaster",
+      "traits": [
+        "Soul Fighter",
+        "Executioner"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Blink to the enemy with the lowest health within 2 hexes and deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies in a 1-hex radius.<br><br><mainText enabled=TFT15_BattleAcademia_IsActive alternate=rules><spellActive enabled=TFT15_BattleAcademia_IsActive alternate=rules>Potential (@TFTUnitProperty.:TFT15_BattleAcademia_CurrentPotential@%i:set14AmpIcon%): </spellActive><TFTBonus><ShowIfNot.TFT15_BattleAcademia_IsActive></ShowIfNot.TFT15_BattleAcademia_IsActive><ShowIf.TFT15_BattleAcademia_IsActive></ShowIf.TFT15_BattleAcademia_IsActive></TFTBonus>@TFTUnitProperty.:TFT15_BattleAcademia_Katarina_FullPotential_TRA@</mainText>"
+      },
+      "characterName": "TFT15_Katarina",
+      "cost": 2,
+      "role": "APFighter",
+      "traits": [
+        "Battle Academia",
+        "Executioner"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Attacks deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> bonus magic damage. Gain additional power based on your Tactician level.<br><br><spellActive>Level @FirstAscensionLevel@:</spellActive> Every 3rd attack launches a wave that deals <magicDamage>@AscensionModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage and @ShredAmount@% <TFTKeyword>Shreds</TFTKeyword> enemies for @ShredDuration@ seconds.<br><spellActive>Level @SecondAscensionLevel@:</spellActive> Every attack launches a wave. Waves travel farther.<br><br><rules><tftbold>Shred:</tftbold> Reduce Magic Resist</rules>"
+      },
+      "characterName": "TFT15_Kayle",
+      "cost": 1,
+      "role": "APSpecialist",
+      "traits": [
+        "Wraith",
+        "Duelist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Heal <scaleHealth>@TotalHealing@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth>, then deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to the 2 nearest enemies and <TFTKeyword>Stun</TFTKeyword> them for @StunDuration@ seconds."
+      },
+      "characterName": "TFT15_Kennen",
+      "cost": 1,
+      "role": "APTank",
+      "traits": [
+        "Supreme Cells",
+        "Protector",
+        "Sorcerer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Gain <TFTBonus>@TotalShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @Duration@ seconds. The next attack deals <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleHealth%)</physicalDamage> bonus physical damage and <TFTKeyword>Stuns</TFTKeyword> for @StunDuration@ seconds."
+      },
+      "characterName": "TFT15_Kobuko",
+      "cost": 2,
+      "role": "ADTank",
+      "traits": [
+        "Mentor",
+        "Heavyweight"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Field Lee Sin to choose a stance. Each stance has a unique ability, and grants Lee Sin a bonus trait."
+      },
+      "characterName": "TFT15_LeeSin",
+      "cost": 5,
+      "role": "ADFighter",
+      "traits": [
+        "Stance Master"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Shield for <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> for @Duration@ seconds and deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleArmor%%i:scaleMR%)</magicDamage> magic damage to enemies in a 2-hex radius.<br><br><mainText enabled=TFT15_BattleAcademia_IsActive alternate=rules><spellActive enabled=TFT15_BattleAcademia_IsActive alternate=rules>Potential (@TFTUnitProperty.:TFT15_BattleAcademia_CurrentPotential@%i:set14AmpIcon%): </spellActive><TFTBonus><ShowIfNot.TFT15_BattleAcademia_IsActive></ShowIfNot.TFT15_BattleAcademia_IsActive><ShowIf.TFT15_BattleAcademia_IsActive></ShowIf.TFT15_BattleAcademia_IsActive></TFTBonus>@TFTUnitProperty.:TFT15_BattleAcademia_Leona_FullPotential_TRA@</mainText>"
+      },
+      "characterName": "TFT15_Leona",
+      "cost": 4,
+      "role": "APTank",
+      "traits": [
+        "Battle Academia",
+        "Bastion"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Field Lulu to choose a monster to train! Each monster has unique abilities."
+      },
+      "characterName": "TFT15_Lulu",
+      "cost": 3,
+      "role": "APCaster",
+      "traits": [
+        "Monster Trainer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Fire an energy ball towards the largest group of enemies containing the target. On arrival, 20% <TFTKeyword>Shred</TFTKeyword> enemies in a 1-hex radius for @ShredDuration@ seconds and deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage split between them plus <magicDamage>@ModifiedBaseDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to each.<br><br><rules><tftbold>Shred:</tftbold> Reduce Magic Resist</rules>"
+      },
+      "characterName": "TFT15_Lux",
+      "cost": 2,
+      "role": "APCaster",
+      "traits": [
+        "Soul Fighter",
+        "Sorcerer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@BonusResists@</TFTBonus>&nbsp;Armor for each item equipped.<br><br><spellActive>Active:</spellActive> Deal <physicalDamage>@ModifiedDamage@ (%i:scaleArmor%%i:scaleAP%)</physicalDamage> physical damage to enemies in a cone."
+      },
+      "characterName": "TFT15_Malphite",
+      "cost": 1,
+      "role": "APTank",
+      "traits": [
+        "The Crew",
+        "Protector"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Infect the closest @SpreadTargets@ uninfected targets, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage over @Duration@ seconds. If an infected target dies, the infection spreads to the nearest uninfected target for any remaining time.<br><br>If all enemies are infected, this effect can stack."
+      },
+      "characterName": "TFT15_Malzahar",
+      "cost": 3,
+      "role": "APCaster",
+      "traits": [
+        "Wraith",
+        "Prodigy"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Gain <TFTBonus>@FinalShield@ (%i:scaleAP%)</TFTBonus> shield for @ShieldDuration@ seconds, then deal <physicalDamage>@ModifiedDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the target."
+      },
+      "characterName": "TFT15_Naafiri",
+      "cost": 1,
+      "role": "ADFighter",
+      "traits": [
+        "Soul Fighter",
+        "Juggernaut"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleHealth%%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. When it breaks, deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage>  physical&nbsp;damage to the target and <physicalDamage>@SecondaryDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical&nbsp;damage to other enemies in a 1-hex radius centered on the target. The target is <TFTKeyword>Stunned</TFTKeyword> for <TFTBonus>@StunDuration@-@MaxStunDuration@</TFTBonus> seconds based on how long the shield held, and other enemies are briefly <TFTKeyword>Stunned</TFTKeyword>."
+      },
+      "characterName": "TFT15_Poppy",
+      "cost": 4,
+      "role": "ADTank",
+      "traits": [
+        "Star Guardian",
+        "Heavyweight"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Heal <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth> and deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to the @NumTargets@ closest enemies.<br><br><mainText enabled=TFT15_BattleAcademia_IsActive alternate=rules><spellActive enabled=TFT15_BattleAcademia_IsActive alternate=rules>Potential (@TFTUnitProperty.:TFT15_BattleAcademia_CurrentPotential@%i:set14AmpIcon%): </spellActive><TFTBonus><ShowIfNot.TFT15_BattleAcademia_IsActive></ShowIfNot.TFT15_BattleAcademia_IsActive><ShowIf.TFT15_BattleAcademia_IsActive></ShowIf.TFT15_BattleAcademia_IsActive></TFTBonus>@TFTUnitProperty.:TFT15_BattleAcademia_Rakan_FullPotential_TRA@</mainText>"
+      },
+      "characterName": "TFT15_Rakan",
+      "cost": 2,
+      "role": "APTank",
+      "traits": [
+        "Battle Academia",
+        "Protector"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage in a short line through the target, then reduce damage taken by <magicDamage>@ModifiedFlatDamageReduction@ (%i:scaleAP%)</magicDamage> for @BuffDuration@ seconds."
+      },
+      "characterName": "TFT15_Rell",
+      "cost": 1,
+      "role": "APTank",
+      "traits": [
+        "Star Guardian",
+        "Bastion"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to the target over <scaleLevel>@Duration@</scaleLevel> seconds. Enemies in a 1-hex radius around the target take <magicDamage>@ModifiedAdditionalDamage@ (%i:scaleAP%)</magicDamage> over the same duration."
+      },
+      "characterName": "TFT15_Ryze",
+      "cost": 4,
+      "role": "APCaster",
+      "traits": [
+        "Mentor",
+        "Executioner",
+        "Strategist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> After casting, gain 1 <TFTKeyword>Style</TFTKeyword> and @VampBonus*100%@%&nbsp;Omnivamp, up of 4 stacks. At max stacks, the next cast is Inner Arsenal Unleashed.<br><br><spellActive>Soul Shot:</spellActive> Deal <physicalDamage>@ModifiedQBulletDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to the target and dash a short distance.<br><br><spellActive>Inner Arsenal Unleashed:</spellActive> Double the passive bonus and leap to a nearby group of enemies, dealing <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> to all enemies in a @HexRange@-hex radius. Reset your <TFTKeyword>Style</TFTKeyword> to 0."
+      },
+      "characterName": "TFT15_Samira",
+      "cost": 4,
+      "role": "ADCaster",
+      "traits": [
+        "Soul Fighter",
+        "Edgelord"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Ultimate Friendship Bomb's damage scales on <TFTBonus>Power of Friendship</TFTBonus>, which is based on all of your team's bonus stats (%i:scaleAD%%i:scaleAP%%i:scaleArmor%%i:scaleMR%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%%i:scaleHealth%). Stats on Seraphine contribute more.<br><br><spellActive>Active:</spellActive> Fire a friendship bomb towards the largest group of enemies within <TFTBonus>@ModifiedCastRange@ (%i:scaleRange%)</TFTBonus> hexes, dealing <magicDamage>@TFTUnitProperty.trait:TFT15_Seraphine_PowerOfFriendship@</magicDamage>&nbsp;(<TFTBonus>Power of Friendship</TFTBonus>) magic damage in a @SpellRadius@-hex radius."
+      },
+      "characterName": "TFT15_Seraphine",
+      "cost": 5,
+      "role": "APCaster",
+      "traits": [
+        "Star Guardian",
+        "Prodigy"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Over a short duration, heal <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth> and deal <physicalDamage>@ModifiedFlurryDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to the target.<br><br>Then, deal <physicalDamage>@ModifiedConeDamage@&nbsp;(%i:scaleHealth%%i:scaleAD%)</physicalDamage> physical damage in a cone. Enemies in the center line take <physicalDamage>@ModifiedTrueDamage@</physicalDamage> more physical damage, increased based on healing received this combat."
+      },
+      "characterName": "TFT15_Sett",
+      "cost": 4,
+      "role": "ADTank",
+      "traits": [
+        "Soul Fighter",
+        "Juggernaut"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Gain <scaleHealth>@ModifiedInitialHealth@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth> max Health, then deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage every second to enemies in a 2-hex radius.<br><br>Subsequent casts heal <scaleHealth>@ModifiedHealing@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth> and increase the damage by <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage>."
+      },
+      "characterName": "TFT15_Swain",
+      "cost": 3,
+      "role": "APTank",
+      "traits": [
+        "Crystal Gambit",
+        "Bastion",
+        "Sorcerer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to the target and reduces their Magic Resist by <scaleLevel>@MRReduction@</scaleLevel>."
+      },
+      "characterName": "TFT15_Syndra",
+      "cost": 1,
+      "role": "APCaster",
+      "traits": [
+        "Crystal Gambit",
+        "Star Guardian",
+        "Prodigy"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Make @NumAttacks@ rapid attacks. Each heals Udyr for <scaleHealth>@ModifiedHealing@&nbsp;(%i:scaleAP%)</scaleHealth> and deals <physicalDamage>@ModifiedAOEDamage@&nbsp;(%i:scaleAD%)</physicalDamage> additional damage to enemies in a 1-hex radius."
+      },
+      "characterName": "TFT15_Udyr",
+      "cost": 3,
+      "role": "ADTank",
+      "traits": [
+        "Mentor",
+        "Juggernaut",
+        "Duelist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellActive>Passive:</spellActive> Gain mana when units die. Enemies grant <scaleMana>@EnemySoulMana@</scaleMana>, allies <scaleMana>@AllySoulMana@</scaleMana>.<br><br><spellActive>Active:</spellActive> Fire <TFTBonus>@ModifiedArrowsPerSecond@ (%i:scaleAS%)</TFTBonus> piercing arrows per second at random enemies until Varus is out of mana. Each arrow costs <scaleMana>@ManaPerArrow@</scaleMana> mana and deals <physicalDamage>@TotalArrowDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage, reduced by @ReducedDamagePerTargetHit*100@% per hit."
+      },
+      "characterName": "TFT15_Varus",
+      "cost": 5,
+      "role": "ADCaster",
+      "traits": [
+        "Wraith",
+        "Sniper"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Attacks deal <magicDamage>@ModifiedPassiveDamage@ (%i:TFTBaseAD%%i:scaleAP%)</magicDamage> magic damage. <br><br><spellActive>Active:</spellActive> The next three attacks unleash a devastating combo. <br><br><TFTBonus>Pommel Bash: </TFTBonus> Deal <magicDamage>@ModifiedComboDamage@ (%i:scaleAP%)</magicDamage> magic damage.<br><TFTBonus>Rising Slash:</TFTBonus> Deal <magicDamage>@ModifiedComboDamage@ (%i:scaleAP%)</magicDamage> magic damage and briefly <TFTKeyword>Stun</TFTKeyword> the target.<br><TFTBonus>Falling Slash:</TFTBonus> Deal <magicDamage>@ModifiedFinalComboDamage@ (%i:scaleAP%)</magicDamage> magic damage."
+      },
+      "characterName": "TFT15_Viego",
+      "cost": 3,
+      "role": "APFighter",
+      "traits": [
+        "Soul Fighter",
+        "Duelist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Gain <TFTBonus>@FinalAttackSpeed@ (%i:scaleAP%)</TFTBonus> attack speed for @AttackNum@ attacks. These attacks deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> bonus physical damage to the target and @AdditionalTargets@ nearby enemies"
+      },
+      "characterName": "TFT15_Xayah",
+      "cost": 2,
+      "role": "ADCarry",
+      "traits": [
+        "Star Guardian",
+        "Edgelord"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Heal <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth>, deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to enemies in a 2-hex radius, and mark the current target. For @Duration@ seconds, take <scaleLevel>@DamageReduction@%</scaleLevel> reduced damage from unmarked enemies."
+      },
+      "characterName": "TFT15_XinZhao",
+      "cost": 2,
+      "role": "ADTank",
+      "traits": [
+        "Soul Fighter",
+        "Bastion"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to the @NumTargets@ closest enemies."
+      },
+      "characterName": "TFT15_Yasuo",
+      "cost": 3,
+      "role": "ADFighter",
+      "traits": [
+        "Mentor",
+        "Edgelord"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Attacks grant <scaleLevel>@ASperAttack*100@%</scaleLevel> stacking Attack Speed and Movement Speed, and alternate between dealing <trueDamage>@ModifiedAttackTrueDamage@ (%i:scaleAD%)</trueDamage> bonus true damage and <magicDamage>@ModifiedAttackMagicDamage@ (%i:scaleAP%)</magicDamage> bonus magic damage.<br><br><spellActive>Active:</spellActive> Send an echo towards the two furthest enemies, dealing <physicalDamage>@ModifiedStrikeDamage@ (%i:scaleAD%)</physicalDamage> physical damage and briefly <TFTKeyword>Stunning</TFTKeyword> enemies hit."
+      },
+      "characterName": "TFT15_Yone",
+      "cost": 5,
+      "role": "ADFighter",
+      "traits": [
+        "Mighty Mech",
+        "Edgelord"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Launch <TFTBonus>@ModifiedNumPages@</TFTBonus> pages dealing <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage each, split between the target and enemies within 2 hexes. Each subsequent cast launches @BaseAdditionalPages@ more pages.<br><br><mainText enabled=TFT15_BattleAcademia_IsActive alternate=rules><spellActive enabled=TFT15_BattleAcademia_IsActive alternate=rules>Potential (@TFTUnitProperty.:TFT15_BattleAcademia_CurrentPotential@%i:set14AmpIcon%): </spellActive><TFTBonus><ShowIfNot.TFT15_BattleAcademia_IsActive></ShowIfNot.TFT15_BattleAcademia_IsActive><ShowIf.TFT15_BattleAcademia_IsActive></ShowIf.TFT15_BattleAcademia_IsActive></TFTBonus>@TFTUnitProperty.:TFT15_BattleAcademia_Yuumi_FullPotential_TRA@</mainText>"
+      },
+      "characterName": "TFT15_Yuumi",
+      "cost": 4,
+      "role": "APCaster",
+      "traits": [
+        "Battle Academia",
+        "Prodigy"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Heal <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth> and deal <magicDamage>@FinalDamage@&nbsp;(%i:scaleAP%%i:scaleHealth%)</magicDamage> magic damage to enemies within a 1-hex radius."
+      },
+      "characterName": "TFT15_Zac",
+      "cost": 1,
+      "role": "APTank",
+      "traits": [
+        "Wraith",
+        "Heavyweight"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Attacks are bouncing bombs that deal <magicDamage>@TotalAttackDamage@&nbsp;(%i:scaleAP%%i:TFTBaseAD%)</magicDamage> magic damage to the first enemy hit.<br><br><spellActive>Active:</spellActive> Deal <magicDamage>@ModifiedExplosionDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage in a 1-hex radius centered on the target."
+      },
+      "characterName": "TFT15_Ziggs",
+      "cost": 3,
+      "role": "APCarry",
+      "traits": [
+        "The Crew",
+        "Strategist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Every @AttacksToSlam@th attack deals <physicalDamage>@SlamDamage@ (%i:scaleAD%)</physicalDamage> physical damage in a 1-hex radius centered on the target. When changing targets, immediately slam for @TargetChangePercent*100@% damage.<br><br><spellActive>Active:</spellActive> For @Duration@ seconds gain <TFTBonus>@ModifiedAttackSpeed@</TFTBonus> Attack Speed, <TFTBonus>@ModifiedOmnivamp@% (%i:scaleAP%)</TFTBonus> Omnivamp, and crowd control immunity."
+      },
+      "characterName": "TFT15_Volibear",
+      "cost": 4,
+      "role": "ADFighter",
+      "traits": [
+        "Luchador",
+        "Edgelord"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Gain @APPerLevel@ %i:scaleAP% per Monster Trainer level (@TFTUnitProperty.:TFT15_MonsterTrainer_KogMawAP@ %i:scaleAP%). Attacks deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic&nbsp;damage.<br><br><spellActive>Active:</spellActive> The next attack deals <magicDamage>@ModifiedExtraProjectileDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage to the target and the @BounceNum@ closest enemies, then 30% <TFTKeyword>Shred</TFTKeyword> and <TFTKeyword>Sunder</TFTKeyword> them for @Duration@ seconds. <br><br><spellActive>Level 15:</spellActive> On-cast, gain <TFTBonus>@AttackSpeed*100@%</TFTBonus> Attack Speed for the rest of combat.<br><br><spellActive>Level 30:</spellActive> Gain infinite range and increase Attack Speed bonuses by @MultiplicativeASBonus*100@%. Max Attack Speed is now @LevelUpASCap@.<br><br><tftitemrules><tftbold>Shred:</tftbold> Reduce Magic Resist</tftitemrules><br><tftitemrules><tftbold>Sunder:</tftbold> Reduce Armor</tftitemrules><br><br>"
+      },
+      "characterName": "TFT15_KogMaw",
+      "cost": 3,
+      "role": "APCarry",
+      "traits": [
+        "Monster Trainer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Gain @ADPerLevel*100@% %i:scaleAD% per Monster Trainer level (@TFTUnitProperty.:TFT15_MonsterTrainer_SmolderAS*100@% %i:scaleAD%). Damage <TFTKeyword>Burns</TFTKeyword> and <TFTKeyword>Wounds</TFTKeyword> for @PassiveDuration@ seconds.<br><br><spellActive>Active:</spellActive> Deal <physicalDamage>@ModifiedDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the target, and <magicDamage>@ModifiedEmberDamage@ (%i:scaleAP%)</magicDamage> magic damage to the 3 nearest targets.<br><br><TFTBonus>Level 15:</TFTBonus> Every @CastsPerBonus@ casts, fire a second blast at the next closest enemy, dealing @SecondcastDamage*100@% damage.<br><br><TFTBonus>Level 30:</TFTBonus> Ignore @ArmorIgnore*100@% of the target's Armor. Reduce max mana by @LevelUpManaReduction@.<br><br>{{TFT_Keyword_Burn}}<br>{{TFT_Keyword_Wound}}"
+      },
+      "characterName": "TFT15_Smolder",
+      "cost": 3,
+      "role": "ADCaster",
+      "traits": [
+        "Monster Trainer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Over 1 second, deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage in a line through the current target. Enemies after the first take <physicalDamage>@SecondaryDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> instead.<br><br>When no targets are left, regain mana based on the time remaining."
+      },
+      "characterName": "TFT15_Senna",
+      "cost": 3,
+      "role": "ADCaster",
+      "traits": [
+        "Mighty Mech",
+        "Executioner"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Fire @NumShots@ shots towards the target. Each deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to the first enemy hit. For each miss, restore <scaleMana>@ManaPerMiss@</scaleMana>&nbsp;mana."
+      },
+      "characterName": "TFT15_Lucian",
+      "cost": 1,
+      "role": "APCaster",
+      "traits": [
+        "Mighty Mech",
+        "Sorcerer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to the lowest health enemy within <TFTBonus>@ModifiedCastRange@</TFTBonus>&nbsp;hexes. If the target dies, <TFTBonus>@ModifiedGoldChance@% %i:scaleAP%</TFTBonus> chance to gain 1 gold.<br><br>Gold Earned: @TFTUnitProperty.:TFT15_GangplankSpell_GoldCount@"
+      },
+      "characterName": "TFT15_Gangplank",
+      "cost": 2,
+      "role": "ADFighter",
+      "traits": [
+        "Mighty Mech",
+        "Duelist"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Every @PassiveCadence@ seconds the next attack deals <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleHealth%)</physicalDamage> bonus physical damage.<br><br><spellActive>Active:</spellActive> Gain <scaleHealth>@TotalHeal@&nbsp;(%i:scaleAP%)</scaleHealth> maximum health over @Duration@ seconds and immediately trigger the passive."
+      },
+      "characterName": "TFT15_DrMundo",
+      "cost": 2,
+      "role": "ADTank",
+      "traits": [
+        "Luchador",
+        "Juggernaut"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@ModifiedASPerStack@ (%i:scaleAP%)</TFTBonus> Attack Speed for each attack against the same target, up to <TFTBonus>@MaxAS@ (%i:scaleAP%)</TFTBonus>.<br><br><spellActive>Active:</spellActive> For @SpellDuration@ seconds, gain <TFTBonus>@GnarAD*100@%</TFTBonus> Attack Damage and grant two nearby allies <TFTBonus>@AllyAD*100@%</TFTBonus> Attack Damage, prioritizing Attack champions."
+      },
+      "characterName": "TFT15_Gnar",
+      "cost": 1,
+      "role": "ADCarry",
+      "traits": [
+        "Luchador",
+        "Sniper"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Fire an energy disc that deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> total magic damage in a 1-hex radius centered on the target."
+      },
+      "characterName": "TFT15_Karma",
+      "cost": 4,
+      "role": "APCaster",
+      "traits": [
+        "Mighty Mech",
+        "Sorcerer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@ArmorPerComponent@</TFTBonus> %i:scaleArmor%%i:scaleMR% for each component equipped to your team.<br><br><spellActive>Active:</spellActive> Heal <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth>, deal <physicalDamage>@ModifiedDamage@ (%i:scaleAD%)</physicalDamage> physical damage in a 1-hex radius centered on the target, and @ArmorShredPercent*100@% <TFTKeyword>Sunder</TFTKeyword> enemies hit for @ArmorShredDuration@ seconds.<br><br><tftitemrules><tftbold>Sunder:</tftbold> Reduce Armor</tftitemrules><br>"
+      },
+      "characterName": "TFT15_Vi",
+      "cost": 2,
+      "role": "ADTank",
+      "traits": [
+        "Crystal Gambit",
+        "Juggernaut"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Gain <TFTBonus>@ModifiedCoreEnergyShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds and deal <magicDamage>@ModifiedSpell1Damage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to the target.<br>"
+      },
+      "characterName": "TFT15_Galio",
+      "cost": 11,
+      "role": "APTank",
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Launch a returning blade 2-hexes through the current target. It deals <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies hit, reduced by @FalloffPercent*100@% per hit."
+      },
+      "characterName": "TFT15_Sivir",
+      "cost": 1,
+      "role": "ADCaster",
+      "traits": [
+        "The Crew",
+        "Sniper"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Attacks bounce between @AttackNumEnemies@ enemies, dealing <magicDamage>@ModifiedPassiveDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage and marking enemies hit. Attacks deal @MultAttackDamageReduction*100@% reduced damage per hit.<br><br><spellActive>Active:</spellActive> Deal <physicalDamage>@ModifiedDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the @SpellNumEnemies@ closest enemies, and detonate their marks for <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage each."
+      },
+      "characterName": "TFT15_TwistedFate",
+      "cost": 5,
+      "role": "HCarry",
+      "traits": [
+        "Rogue Captain",
+        "The Crew"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Shield <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> for @Duration@ seconds. The next @AttackCount@ attacks deal <trueDamage>@ModifiedDamage@&nbsp;(%i:scaleMR%)</trueDamage>&nbsp;bonus true damage."
+      },
+      "characterName": "TFT15_Shen",
+      "cost": 2,
+      "role": "APTank",
+      "traits": [
+        "The Crew",
+        "Bastion",
+        "Edgelord"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@TrainerResists@&nbsp;%i:scaleArmor%%i:scaleMR%</TFTBonus> per Monster Trainer level (@TFTUnitProperty.:TFT15_MonsterTrainer_RammusResists@ %i:scaleArmor%%i:scaleMR%).<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@TotalShieldValue@</TFTBonus>&nbsp;(%i:scaleAP%) Shield for @ShieldDuration@ seconds. When it breaks, deal <magicDamage>@TotalDamage@&nbsp;(%i:scaleArmor%%i:scaleMR%)</magicDamage> magic damage to the nearest 3 enemies and <TFTKeyword>Stun</TFTKeyword> them for @StunDuration@ second.<br><br><spellActive>Level 15:</spellActive> On cast, leap to the largest group within 2 hexes and <TFTKeyword>Taunt</TFTKeyword> enemies. Gain <scaleHealth>@ModifiedLeapHealth@&nbsp;(%i:scaleAP%)</scaleHealth> max Health per enemy Taunted.<br><br><spellActive>Level 30:</spellActive> Gain an additional @TrainerResists@&nbsp;%i:scaleArmor%&nbsp;Armor and %i:scaleMR%&nbsp;Magic Resist per Trainer level. Increase the Stun to @IncreasedStunDuration@ seconds."
+      },
+      "characterName": "TFT15_Rammus",
+      "cost": 3,
+      "role": "APTank",
+      "traits": [
+        "Monster Trainer"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Summon <scaleLevel>@NumPlants@</scaleLevel> untargetable Thornspitters that deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> per attack and attack @SummonAttacks@ times. <br><br>Non-plant allies gain <TFTBonus>@ModifiedAS@ (%i:scaleAP%)</TFTBonus> Attack Speed decaying over @ASDuration@ seconds."
+      },
+      "characterName": "TFT15_Zyra",
+      "cost": 5,
+      "role": "APCaster",
+      "traits": [
+        "Crystal Gambit",
+        "Rosemother"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "Attacks deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage."
+      },
+      "characterName": "TFT15_ZyraGraspingPlant",
+      "cost": 1,
+      "role": "APTank",
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Attacks deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage."
+      },
+      "characterName": "TFT15_ZyraThornPlant",
+      "cost": 1,
+      "role": "ADCarry",
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Gain <scaleLevel>@DR*100@%</scaleLevel> Durability and heal <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth> over @BuffDuration@&nbsp;seconds, then deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage>&nbsp;magic damage to enemies in a 2-hex radius."
+      },
+      "characterName": "TFT15_Neeko",
+      "cost": 3,
+      "role": "APTank",
+      "traits": [
+        "Star Guardian",
+        "Protector"
+      ]
+    },
+    {
+      "ability": {
+        "desc": "<TFTBonus>Ekko was pulled from another universe by the Isekai augment.</TFTBonus><br><br>Freeze all units while attacking the nearest @NumEnemies@ enemies @NumAttacks@ total times. Each attack deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage, "
+      },
+      "characterName": "TFT15_Ekko",
+      "cost": 5,
+      "role": "APFighter",
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "<i>-Jinx</i>"
+      },
+      "characterName": "TFT15_PetCreepyCat",
+      "cost": 1,
+      "role": null,
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "Slam the target dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage."
+      },
+      "characterName": "TFT_BlueGolem",
+      "cost": 1,
+      "role": "APTank",
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "<spellPassive>Passive:</spellPassive> Occasionally dash around the board."
+      },
+      "characterName": "TFT9_SLIME_Crab",
+      "cost": 1,
+      "role": null,
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle."
+      },
+      "characterName": "TFT_TrainingDummy",
+      "cost": 1,
+      "role": "ADTank",
+      "traits": []
+    },
+    {
+      "ability": {
+        "desc": "This chest stores all of the accumulated loot you've collected. Win a combat against a player to open it!"
+      },
+      "characterName": "TFT6_MercenaryChest",
+      "cost": 11,
+      "role": null,
+      "traits": []
+    }
+  ]
+}
